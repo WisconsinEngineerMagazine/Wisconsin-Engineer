@@ -51,6 +51,10 @@ Template Name: Feature Page
         <a id="print-cancel" target="_blank" href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=Z9RDVPM578HBC">Or cancel your subscription</a>
     </div>
 
+    <div id="advertisement">
+        <a href="http://epd.wisc.edu/wiengineer" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/src/Banner.png"></a>
+    </div>
+
 
     <div id="physical-locations">
         <p>Or you can pick up a FREE copy at these locations</p>
