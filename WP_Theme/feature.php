@@ -20,7 +20,7 @@ Template Name: Feature Page
         <div id="featured-hero-text">
             <h1>The Latest Issue</h1>
             <!-- <h2>< ?php wp_title(''); ?></h2> -->
-            <h2>October/Fall 2015 - Volume 119 - Issue 4 </h2>
+            <h2>December 2015 / Volume 120, &nbsp;Issue 1 </h2>
         </div>
     <?php endif; ?>
     <div id="feature-content">
