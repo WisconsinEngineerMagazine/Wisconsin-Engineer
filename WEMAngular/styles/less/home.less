@@ -1,0 +1,245 @@
+//out: ../css/home.css, sourcemap: false, compress: true
+
+@import 'variables.less';
+
+.home-new-mag{
+    background-color: lighten(@white, 4%);
+    padding: 0 !important;
+    .shadow(2);
+
+    .home-left{
+        display: inline-block;
+        width: 50%;
+        height: 600px;
+        box-sizing: border-box;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        vertical-align: top;
+        h1{
+            display: block;
+            text-align: center;
+            font-size: 12pt;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+            color: fade(@black, 70%);
+        }
+        h2{
+            font-size: 12pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: fade(@black, 70%);
+            text-align: center;
+            font-weight: 300;
+            b{
+                display: block;
+                font-size: 16pt;
+                box-sizing: border-box;
+                padding: 6px 0;
+                color: @text;
+                font-weight: 900;
+            }
+        }
+        #read-latest{
+            box-sizing: border-box;
+            padding: 10px 20px;
+            background-color: @red;
+            color: @white;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 10pt;
+            font-weight: 400;
+            margin: 45px auto 0 auto;
+            .shadow(1);
+            &:hover,
+            &:focus{
+                cursor: pointer;
+                transition: @transition;
+                background-color: darken(@red, 5%);
+            }
+            &:active{
+                transition: @transition;
+                background-color: darken(@red, 10%);
+            }
+        }
+    }
+    .home-right{
+        height: 600px;
+        vertical-align: top;
+        width: 50%;
+        display: inline-block;
+        background-size: auto 100%;
+        background-position: center center;
+    }
+}
+
+
+.section-header{
+    display: block;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: @text;
+    font-size: 14pt;
+    padding: 15px 0;
+    margin: 0 0 25px 0;
+    border-bottom: 1px solid fade(@black, 10%);
+}
+.home-articles{
+    border-bottom: 1px solid fade(@black, 10%);
+    .article{
+        padding: 25px 0;
+        border-bottom: 1px solid fade(@black, 10%);
+        &:first-child{
+            padding: 0 0 25px 0;
+        }
+        &:last-child{
+            border-bottom: 0px solid black;
+        }
+        .article-image{
+            display: inline-block;
+            width: 25%;
+            vertical-align: top;
+            background-size: auto 100%;
+            background-position: center center;
+            height: 160px;
+        }
+        .article-body{
+            height: 160px;
+            display: inline-flex;
+            width: 75%;
+            flex-direction: column;
+            justify-content: center;
+            vertical-align: top;
+            box-sizing: border-box;
+            padding: 0 15px;
+            a{
+                display: block;
+                text-align: left;
+                font-family: @serif;
+                font-weight: bolder;
+                letter-spacing: 1px;
+                font-size: 14pt;
+                margin: 0;
+                color: @text;
+                width: 100%;
+                padding: 0;
+                line-height: 1.5em;
+                u{
+                    text-decoration: none;
+                }
+                &:hover,
+                &:focus{
+                    cursor: pointer;
+                    color: @red;
+                    u{
+                        border-bottom: 2px inset @red;
+                        position: relative;
+                    }
+                }
+                &:active{
+                    color: darken(@red, 5%);
+                    transition: @transition;
+                }
+            }
+            p{
+                font-family: @sans;
+                font-size: 12pt;
+                letter-spacing: 0px;
+                color: @text;
+                font-weight: 400;
+                padding: 10px 0;
+                margin:  0;
+            }
+            h3{
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: @sans;
+                color: fade(@black, 40%);
+                font-weight: bolder;
+                font-size: 10pt;
+                text-align: left;
+                display: block;
+                width: 100%;
+                padding: 0 0 10px 0;
+            }
+        }
+    }
+}
+
+#home-read-more{
+    font-size: 16pt;
+    font-family: @serif;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: @text;
+    letter-spacing: 1px;
+    padding: 45px 0 15px 0;;
+    a{
+        color: @red;
+        border-bottom: 2px solid @red;
+        &:hover,
+        &:focus{
+            color: darken(@red, 5%);
+            transition: @transition;
+        }
+        &:active{
+            color: darken(@red, 10%);
+            transition: @transition;
+        }
+    }
+}
+
+
+.home-copy-left{
+    display: block;
+    width: 100%;
+    p{
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 12pt;
+        line-height: 1.6em;
+    }
+    #subscribe-physical{
+        background-color: @red;
+        color: @white;
+        box-sizing: border-box;
+        padding: 15px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size: 12pt;
+        margin: 10px auto 0 auto;
+        display: block;
+        width: 180px;
+        text-align: center;
+        transition: @transition;
+        .shadow(1);
+        &:hover,
+        &:focus{
+            background-color: darken(@red, 5%);
+            transition: @transition;
+        }
+        &:active{
+            transition: @transition;
+            background-color: darken(@red, 10%);
+        }
+    }
+    #subscribe-physical-cancel{
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: fade(@black, 60%);
+        font-size: 8pt;
+        padding: 5px 0 0 0;
+        transition: @transition;
+        &:hover,
+        &:focus{
+            color: fade(@black, 80%);
+            transition: @transition;
+        }
+    }
+}

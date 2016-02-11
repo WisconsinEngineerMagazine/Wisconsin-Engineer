@@ -161,17 +161,17 @@ $("#contact-form-send").click(function () {
             data: {
                 'key': 'lq4msOm2tOT7-hPl3fBw6A',
 				'message': {
-                    'from_email': 'noreply@wisconsinengineer.com',
+                    'from_email': email,
                     'to': [
                 {
-                    'email': 'wiscengrmag@gmail.com',
+                    'email': 'wiscengrmagazine@gmail.com',
                     'name': 'Wisconsin Engineer',
                     'type': 'to'
                 }
                 ],
                 'autotext': 'true',
                 'subject': 'Contact Wisconsin Engineer - '+name,
-                'html': '<span style="font-size:12pt; font-family: Helvetica, sans-serif;"><b>Message From:</b><br/> <span style="background-color:yellow;">'+name+'</span><br/><br/><b>Email Address:</b><br/>  <span style="background-color:yellow;">'+email+'</span><b><br/><br/>Message:</b><br/> <span style="background-color:yellow;">'+message+'</span></span><br/><h5>This is an automatically-generated email. Do not reply.</h5><br/><h3>To respond to this person, copy and paste the email address from above, or <a href="mailto:'+email+'?Subject=Thanks%20For%20Contacting%20Wisconsin%20Engineer">Click Here</a></h3>'
+                'html': '<span style="font-size:12pt; font-family: Helvetica, sans-serif;"><b>Message From:</b><br/> <span style="">'+name+'</span><br/><br/><b>Email Address:</b><br/>  <span style="">'+email+'</span><b><br/><br/>Message:</b><br/> <span style="">'+message+'</span></span><br/><h5>This is an automatically-generated email. Do not reply.</h5><br/><h3>To respond to this person, copy and paste the email address from above, or <a href="mailto:'+email+'?Subject=Thanks%20For%20Contacting%20Wisconsin%20Engineer">Click Here</a></h3>'
             }
         }
         }).done(function(response) {

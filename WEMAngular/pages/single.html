@@ -1,0 +1,26 @@
+<div class="width-control">
+    <div class="inner single-article">
+        <div class="single-image" style="background-image:url({{currentArticle.thumbnail_images.full.url}})"></div>
+        <div class="single-body">
+            <h1 ng-bind-html="currentArticle.title | unsafe"></h1>
+            <h3>By {{currentArticle.custom_fields.sfly_guest_author_names[0]}}</h3>
+            <span class="single-excerpt" ng-bind-html="currentArticle.excerpt | unsafe"></span>
+            <span class="single-content" ng-bind-html="currentArticle.content | unsafe"></span>
+        </div>
+    </div>
+</div>
+
+<div class="full-width white">
+    <div class="width-control">
+        <div class="inner">
+
+            <h1 class="section-header">Want to see your own story here? Join us!</h1>
+            <p>
+                The Wisconsin Engineer is always looking for new staff members. Whether you want to write, take pictures, work on the magazine layout, or work on the website, you're always welcome to join us - you don't even need to be an engineering student!
+                <br><br>
+                We have a kickoff meeting at the beginning of each semester where we get everything and all the new members set up, but we also accept new members throughout the semester! Contact us if you'd like to join!
+            </p>
+
+        </div>
+    </div>
+</div>

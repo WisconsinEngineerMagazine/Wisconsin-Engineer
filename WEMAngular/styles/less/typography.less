@@ -1,0 +1,54 @@
+//out: ../css/typography.css, sourcemap: false, compress: true
+
+@import 'variables.less';
+
+#h-tag(){
+    padding: 0;
+    margin: 0 auto;
+}
+h1{
+    #h-tag();
+}
+h2{
+    #h-tag();
+}
+h3{
+    #h-tag();
+}
+h4{
+    #h-tag();
+}
+h5{
+    #h-tag();
+}
+h6{
+    #h-tag();
+}
+
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+    &:visited{
+        text-decoration: none;
+    }
+    &:active{
+        text-decoration: none;
+    }
+    &:focus{
+        text-decoration: none;
+    }
+}
+
+p{
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12pt;
+    line-height: 1.6em;
+}
+
+i{
+    font-family: @ionicons;
+}

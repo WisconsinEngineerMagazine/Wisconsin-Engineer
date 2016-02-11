@@ -1,0 +1,53 @@
+@import 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css';
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300,700);
+
+@ionicons: 'Ionicons';
+@sans: 'Lato', sans-serif;
+@serif: 'Merriweather', serif;
+
+
+// Colors
+@red: #B83120;
+@yellow: #FFE066;
+@blue: #5D8DF8;
+@green: #0CC363;
+@black: #101C34;
+@white: #F6F7FB;
+@text: fade(@black, 90%);
+
+// Heights and demensions
+@headerheight: 75px;
+
+// Misc
+@transition: 0.15s;
+
+
+
+// Mixins
+/* Gradient Mixin */
+.gradient(@origin: left, @start: #ffffff, @stop: #000000) {
+	background-color: @start;
+	background-image: -webkit-linear-gradient(@origin, @start, @stop);
+	background-image: -moz-linear-gradient(@origin, @start, @stop);
+	background-image: -o-linear-gradient(@origin, @start, @stop);
+	background-image: -ms-linear-gradient(@origin, @start, @stop);
+	background-image: linear-gradient(@origin, @start, @stop);
+}
+.shadow(@level: 1){
+	& when (@level = 1) {
+	   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   	}
+   	& when (@level = 2) {
+	   box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.14);
+   	}
+   	& when (@level = 3) {
+	   box-shadow: 0 2px 5px rgba(0,0,0,0.03), 0 2px 5px rgba(0,0,0,0.06);
+   	}
+   	& when (@level = 4) {
+	   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   	}
+   	& when (@level = 5) {
+	   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+   	}
+}
