@@ -1,4 +1,4 @@
-var wemApp = angular.module('wemApp', ['ngRoute', 'ngStorage']);
+var wemApp = angular.module('wemApp', ['ngRoute', 'ngStorage', 'ngAnimate']);
 
 // configure the routes
 wemApp.config(function($routeProvider, $locationProvider) {
@@ -6,36 +6,40 @@ wemApp.config(function($routeProvider, $locationProvider) {
 
     .when('/', {
         templateUrl : 'pages/home.html',
-        controller  : 'homeController'
+        controller  : 'homeController',
+        activetab: 'home'
     })
     .when('/articles', {
         templateUrl : 'pages/articles.html',
-        controller  : 'articlesController'
+        controller  : 'articlesController',
+        activetab: 'articles'
     })
     .when('/articles/:article/:articleSlug', {
         templateUrl : 'pages/single.html',
-        controller  : 'singleController'
+        controller  : 'singleController',
+        activetab: 'articles'
     })
-    .otherwise('/');
 
+    .when('/contact', {
+        templateUrl : 'pages/contact.html',
+        controller  : 'contactController',
+        activetab: 'contact'
+    })
+    .when('/about', {
+        templateUrl : 'pages/about.html',
+        controller  : 'aboutController',
+        activetab: 'about'
+    })
+    .when('/advertise', {
+        templateUrl : 'pages/advertise.html',
+        activetab: 'advertise'
+    })
+    .when('/40404040404040404!!!!', {
+        templateUrl : 'pages/fourohfour.html'
+    })
+    .otherwise('/40404040404040404!!!!')
 
 });
-
-
-
-// $scope.wpArticles = "";
-//
-// $http.get('http://wisconsinengineer.com/?json=1')
-//     .success(function (data) {
-//         // $scope.wpArticles = data.posts.slice(0,6);
-//         $scope.wpArticles = data.posts;
-//         console.log(data.posts);
-//         // $scope.fromTheBlog = data.slice(0,6);
-//     })
-//     .error(function (data, status, headers, config) { // Error if problems with JSON
-//         console.log("Error loading JSON");
-//     });
-
 
 
 
@@ -50,9 +54,12 @@ wemApp.factory("getWP", ['$http',function($http){
  return obj;
 }]);
 
+
 // Home page controller
-wemApp.controller('homeController', ['$scope', '$http', 'getWP',
-    function($scope, $http, getWP) {
+wemApp.controller('homeController', ['$scope', '$http', '$route', 'getWP',
+    function($scope, $http, $route, getWP) {
+
+        $scope.$route = $route;
 
         // Menu controller, used across all pages
         $scope.toggleMenu = function(){
@@ -64,9 +71,21 @@ wemApp.controller('homeController', ['$scope', '$http', 'getWP',
 
 
         getWP.fetchArticles().success(function(response){
-            $scope.wpArticles = response.posts.slice(0,4);
+            $scope.homeArticles = response.posts.slice(0,4);
+            $scope.wpArticles = response.posts;
             console.log($scope.wpArticles)
         });
+
+
+
+        // Active link handling
+        $scope.getClass = function (path) {
+            if ($location.path().substr(0, path.length) === path) {
+                return 'active';
+            } else {
+                return '';
+            }
+        }
 
 
 
@@ -108,22 +127,15 @@ wemApp.controller('articlesController', ['$scope', '$location', '$anchorScroll',
             $sessionStorage.clickedArticle = article;
         }
 
-        getWP.fetchArticles().success(function(response){
-            $scope.wpArticles = response.posts;
-            console.log($scope.wpArticles)
-        });
-
-
-
 
 
     }
 ]);
 
 
-// Articles page controller
-wemApp.controller('singleController', ['$scope', '$location', '$anchorScroll', '$rootScope', '$route', '$routeParams', 'getWP',
-    function($scope, $location, $anchorScroll, $rootScope, $route, $routeParams, getWP) {
+// Single page controller
+wemApp.controller('singleController', ['$scope', '$rootScope', '$route', '$routeParams', 'getWP',
+    function($scope, $rootScope, $route, $routeParams, getWP) {
 
         $scope.currentArticle = $routeParams.article;
 
@@ -137,6 +149,73 @@ wemApp.controller('singleController', ['$scope', '$location', '$anchorScroll', '
     }
 ]);
 
+
+// Contact page controller
+wemApp.controller('contactController', ['$scope', '$http',
+    function($scope, $http) {
+
+
+
+
+
+        $scope.sendBtn = "Send";
+        $scope.sendFailed = false;
+
+        $scope.sendForm = function(){
+
+            $scope.sendBtn = "Sending..."
+            $scope.messageSent = false;
+
+            if(!$scope.contactName | !$scope.contactEmail | !$scope.contactMessage){
+                $scope.sendBtn = "Try again"
+                $scope.sendFailed = true;
+                return;
+            }else{
+                $http.post('https://mandrillapp.com/api/1.0//messages/send.json', {
+                    'key': 'lq4msOm2tOT7-hPl3fBw6A',
+                    'message': {
+                        'html': '<span style="font-size:12pt; font-family: Helvetica, sans-serif;"><b>Message From:</b><br>'+$scope.contactName+'<br><br><b>Email Address:</b><br>'+$scope.contactEmail+'<b><br/><br/>Message:</b><br>'+$scope.contactMessage+'<br><br><br><small>This is an automatically-generated email. You can reply to this email like any other email and it will be sent to the original message sender.</small>',
+                        'subject': 'Contact WEM - '+$scope.contactName,
+                        'from_email': $scope.contactEmail,
+                        'from_name': $scope.contactName,
+                        'to': [
+                            {
+                                'email': 'samuels.mitch@gmail.com',
+                                'name': 'Mitch Samuels',
+                                'type': 'to'
+                            }
+                        ],
+                        'headers': {
+                            'Reply-To': $scope.contactEmail
+                        }
+                    }
+                })
+                .success(function(data, status, headers, config){
+                    console.log("SENT");
+                    $scope.sendFailed = false;
+                    $scope.sendBtn = "Sent Successfully!";
+                    $scope.messageSent = true;
+                });
+
+            }
+
+
+        }
+
+
+
+    }
+]);
+
+
+// About page controller
+wemApp.controller('aboutController', ['$scope',
+    function($scope) {
+
+
+
+    }
+]);
 
 
 wemApp.filter('unsafe', function($sce) { return $sce.trustAsHtml; });

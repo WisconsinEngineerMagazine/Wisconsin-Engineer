@@ -2,6 +2,27 @@
 
 @import 'variables.less';
 
+
+.div[ng-view].ng-enter, div[ng-view].ng-leave {
+    -webkit-transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.55s;
+    transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.55s;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+div[ng-view].ng-enter {
+    -webkit-transform: translateY(100%) !important;
+}
+div[ng-view].ng-enter-active {
+    -webkit-transform: translateY(0);
+}
+div[ng-view].ng-leave {
+    -webkit-transform: translateY(0);
+}
+div[ng-view].ng-leave-active {
+    -webkit-transform: translateY(100%);
+}
+
+
 html{
     width: 100%;
     height: 100%;
@@ -9,7 +30,8 @@ html{
     margin: 0 auto;
     padding: 0;
     background-color: #FFF;
-    .gradient(top, lighten(@red, 15%), darken(@red, 2%));
+    .gradient(top, darken(#DD4B46, 3%), darken(#DD4B46, 5%));
+    // .gradient(top, lighten(@red, 15%), darken(@red, 2%));
     background-attachment: fixed;
 
 }
@@ -21,7 +43,14 @@ body{
 
 }
 
-
+*{
+    outline: none;
+    &:hover,
+    &:focus,
+    &:active{
+        outline: none;
+    }
+}
 
 .width-control{
     width: 100%;
@@ -41,18 +70,24 @@ body{
         width: 100%;
         box-sizing: border-box;
         padding: 35px 25px;
+        &.top{
+            background-color: lighten(@white, 4%);
+            box-shadow: @redshadow;
+        }
     }
 }
 
 .full-width{
     width: 100%;
-    .shadow(2);
+    z-index: 100;
     &.white{
-        background-color: lighten(@white, 2%);
+        background-color: @whiter;
         border-top: 1px solid fade(@black, 10%);
+        box-shadow: @redshadow;
+        margin-top: 75px;
     }
-    &.darker{
-        background-color: @white;
+    &.grey{
+        background-color: lighten(@white, 2%);
         border-top: 1px solid fade(@black, 10%);
     }
 }
@@ -65,7 +100,7 @@ footer{
     width: 100%;
     box-sizing: border-box;
     padding: 35px;
-    .gradient(bottom, darken(@black, 2%), lighten(@black, 2%));
+    .gradient(bottom, @black, lighten(@black, 2%));
     h1{
         display: block;
         width: 100%;
@@ -76,7 +111,6 @@ footer{
         font-weight: 200;
         b{
             font-weight: 900;
-
         }
     }
     ul{
@@ -97,7 +131,6 @@ footer{
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-weight: 200;
-
                 font-size: 10pt;
             }
         }
@@ -136,6 +169,7 @@ footer{
     font-weight: 400;
     margin: 45px auto 0 auto;
     .shadow(1);
+    transition: @transition;
     &:hover,
     &:focus{
         cursor: pointer;

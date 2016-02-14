@@ -3,17 +3,16 @@
 @import 'variables.less';
 
 .article-list{
-    background-color: lighten(@white, 4%);
     padding: 0 !important;
-    .shadow(2);
-
     .article-item{
         display: inline-block;
         box-sizing: border-box;
         vertical-align: top;
         border-right: 1px solid fade(@black, 20%);
-        // padding: 15px;
         width: 50%;
+        &:nth-child(even){
+            border-right: none;
+        }
         .article-item-img{
             display: block;
             width: 100%;
@@ -112,7 +111,7 @@
 .single-article{
     background-color: lighten(@white, 4%);
     padding: 0 !important;
-    .shadow(2);
+    box-shadow: @redshadow;
     .single-image{
         width: 100%;
         height: 360px;

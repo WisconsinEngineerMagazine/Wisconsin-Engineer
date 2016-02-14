@@ -18,13 +18,15 @@
     <link href='styles/css/nav.css' rel='stylesheet' type='text/css'>
     <link href='styles/css/home.css' rel='stylesheet' type='text/css'>
     <link href='styles/css/articles.css' rel='stylesheet' type='text/css'>
+    <link href='styles/css/404.css' rel='stylesheet' type='text/css'>
+    <link href='styles/css/contact.css' rel='stylesheet' type='text/css'>
 
     <!-- SCRIPTS -->
     <script src="scripts/vendor/angular.min.js" type="text/javascript"></script>
     <script src="scripts/vendor/angular-route.min.js" type="text/javascript"></script>
     <script src="scripts/vendor/ngStorage.min.js" type="text/javascript"></script>
-    <script src="scripts/vendor/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="scripts/vendor/jquery.transit.min.js" type="text/javascript"></script>
+    <script src="scripts/vendor/ngStorage.min.js" type="text/javascript"></script>
+    <script src="scripts/vendor/angular-animate.min.js" type="text/javascript"></script>
     <script src="app.js" type="text/javascript"></script>
 
 
@@ -32,16 +34,25 @@
 </head>
 <body ng-controller="homeController">
 
+
+    <div class="error-modal" ng-show="showError">
+        <div class="error-box" ng-class="{'red' : errorRed, 'blue' : errorBlue, 'green' : errorGreen}">
+            <h1>{{errorTitle}}</h1>
+            <h2>{{errorDesc}}</h2>
+        </div>
+    </div>
+
+
     <header>
         <i class="ion-navicon" id="menu-btn" ng-click="toggleMenu()"></i>
         <h1>Wisconsin<b>Engineer</b></h1>
         <nav id="main-nav">
             <ul>
-                <li><a href="/#/">Home</a></li>
-                <li><a href="/#/articles">Articles</a></li>
-                <li><a href="/#/about">About</a></li>
-                <li><a href="/#/advertise">Advertise</a></li>
-                <li><a href="/#/contact">Contact</a></li>
+                <li ng-class="{active: $route.current.activetab == 'home'}"><a href="/#/">Home</a></li>
+                <li ng-class="{active: $route.current.activetab == 'articles'}"><a href="/#/articles">Articles</a></li>
+                <li ng-class="{active: $route.current.activetab == 'about'}"><a href="/#/about">About</a></li>
+                <li ng-class="{active: $route.current.activetab == 'advertise'}"><a href="/#/advertise">Advertise</a></li>
+                <li ng-class="{active: $route.current.activetab == 'contact'}"><a href="/#/contact">Contact</a></li>
             </ul>
         </nav>
     </header>

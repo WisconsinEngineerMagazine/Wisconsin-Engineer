@@ -8,19 +8,24 @@
 
 
 // Colors
-@red: #B83120;
+@red: #DD4B46;
+// @red: #B83120;
 @yellow: #FFE066;
 @blue: #5D8DF8;
 @green: #0CC363;
-@black: #101C34;
+@black: #0E1820;
 @white: #F6F7FB;
+@whiter: #FFFFFF;
 @text: fade(@black, 90%);
 
 // Heights and demensions
-@headerheight: 75px;
+@headerheight: 125px;
 
 // Misc
 @transition: 0.15s;
+@fullshadow: 0px -1px 5px 0px rgba(0,0,0,0.35);
+@redshadow: 0px 0px 10px 0px rgba(0,0,0,0.31);
+
 
 
 
@@ -42,12 +47,12 @@
 	   box-shadow: 0 3px 6px rgba(0,0,0,0.10), 0 3px 6px rgba(0,0,0,0.14);
    	}
    	& when (@level = 3) {
-	   box-shadow: 0 2px 5px rgba(0,0,0,0.03), 0 2px 5px rgba(0,0,0,0.06);
+	   box-shadow: 0 2px 5px rgba(0,0,0,0.13), 0 2px 5px rgba(0,0,0,0.16);
    	}
    	& when (@level = 4) {
 	   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
    	}
    	& when (@level = 5) {
-	   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+		box-shadow: 0px -1px 5px 0px rgba(0,0,0,0.75);
    	}
 }

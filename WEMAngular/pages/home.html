@@ -1,5 +1,5 @@
 <div class="width-control">
-    <div class="inner home-new-mag">
+    <div class="inner top home-new-mag">
         <div class="home-left">
 
             <h1>Latest Issue:</h1>
@@ -17,11 +17,11 @@
 
 <div class="full-width white" ng-init="loadArticles();">
     <div class="width-control">
-        <div class="inner">
 
+        <div class="inner">
             <h1 class="section-header">Latest Articles</h1>
             <div class="home-articles">
-                <div class="article" ng-repeat="article in wpArticles track by $index">
+                <div class="article" ng-repeat="article in homeArticles track by $index">
                     <div class="article-image" ng-style="{'background-image':'url({{article.thumbnail_images.full.url}})'}">
                     </div><!--
                     --><div class="article-body">
@@ -31,32 +31,27 @@
                     </div>
                 </div>
             </div>
-
             <h2 id="home-read-more">Want more to read? <a href="/#/articles">View all articles.</a></h2>
-
         </div>
+
     </div>
 </div>
 
 
-<div class="full-width darker">
+<div class="full-width grey">
     <div class="width-control">
+
         <div class="inner">
-
             <h1 class="section-header">Get a physical copy of Wisconsin Engineer.</h1>
-            <div class="home-copy-left">
-
-                <p>
-                    Support over 100 years of student journalism and get the Wisconsin Engineer delivered straight to your door.  It's only $12 per year (4 issues).
-                </p>
-                <a href="#" id="subscribe-physical">Sign Up Now</a>
-                <a href="#" id="subscribe-physical-cancel">Or cancel your subscription</a>
-                <p>
-                    You can pick up a free copy of the Wisconsin Engineer in many buildings on campus, including <b>Union South, Memorial Union, Holt, Steenbock, College Library, The University Bookstore, Witte, Sellery, Ogg, Liz Waters, Carson's, Engineering Hall, Mickie's Dairy Bar</b> and many more.
-                </p>
-
-            </div>
-
+            <p>
+                Support over 100 years of student journalism and get the Wisconsin Engineer delivered straight to your door.  It's only $12 per year (4 issues).
+            </p>
+            <a href="#" id="subscribe-physical">Sign Up Now</a>
+            <a href="#" id="subscribe-physical-cancel">Or cancel your subscription</a>
+            <p>
+                You can pick up a free copy of the Wisconsin Engineer in many buildings on campus, including <b>Union South, Memorial Union, Holt, Steenbock, College Library, The University Bookstore, Witte, Sellery, Ogg, Liz Waters, Carson's, Engineering Hall, Mickie's Dairy Bar</b> and many more.
+            </p>
         </div>
+
     </div>
 </div>

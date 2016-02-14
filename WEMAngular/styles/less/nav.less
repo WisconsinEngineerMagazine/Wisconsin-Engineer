@@ -2,35 +2,34 @@
 
 @import 'variables.less';
 
-#header-spacefix{
-    display: block;
-    width: 100%;
-    height: @headerheight;
-    padding: 25px 0 0 0;
-}
+// #header-spacefix{
+//     display: block;
+//     width: 100%;
+//     height: @headerheight;
+//     padding: 25px 0 0 0;
+// }
 header{
-    height: @headerheight;
-    position: fixed;
     width: 100%;
-    z-index: 10000;
-    padding: 15px 0 0 0;
+    padding: 5px 0 0 0;
     display: block;
+    margin: 0 0 20px 0;
+    position: relative;
     box-sizing: border-box;
     @media only screen and (min-width: 450px) {
-        padding: 15px 8% 0 8%;
+        padding: 5px 8% 0 8%;
     }
     @media only screen and (min-width: 700px) {
-        padding: 15px 12% 0 12%;
+        padding: 5px 12% 0 12%;
     }
     @media only screen and (min-width: 1000px) {
-        padding: 15px 15% 0 15%;
+        padding: 5px 15% 0 15%;
     }
     #menu-btn{
         height: @headerheight;
         width: @headerheight;
         float: right;
         text-align: center;
-        color: @white;
+        color: lighten(@white, 4%);
         box-sizing: border-box;
         padding: 12px 0px 0 0;
         font-size: 52px;
@@ -71,40 +70,35 @@ header{
         }
     }
     h1{
-        color: @white;
+        color: lighten(@white, 4%);
         display: inline-block;
         box-sizing: border-box;
         padding: 5px 0;
         font-size: 22pt;
         line-height: 0.9em;
         font-weight: 100;
-        height: @headerheight;
         text-transform: uppercase;
         padding: 12px 0 0 15px;
         letter-spacing: -1px;
-        @media only screen and (min-width: 450px) {padding: 12px 0 0 0}
+        @media only screen and (min-width: 450px) {padding: 18px 0 0 0}
         b{
             font-weight: 900;
             letter-spacing: 1.05px;
-            display: block;
+            margin: 0 0 0 3px;
         }
     }
     nav{
-        position: fixed;
-        top: 90px;
-        right: 0;
-        padding: 6px 0;
+        position: relative;;
+        padding: 6px 0 6px 0;
         display: none;
-        background-color: @black;
+        background-color: transparent;
+        // background-color: lighten(@white, 4%);
         .shadow(2);
-        @media only screen and (min-width: 450px) {right: 8%;}
-        @media only screen and (min-width: 700px) {right: 12%;}
-        @media only screen and (min-width: 1000px) {right: 15%;}
+        margin: 15px 0 0 0;
+        .shadow(2);
         @media only screen and (min-width: 780px) {
-            display: inline-block;
-            background-color: transparent;
+            display: block;
             box-shadow: none;
-            top: 30px;
         }
 
         ul{
@@ -122,22 +116,30 @@ header{
                 width: 100%;
                 box-sizing: border-box;
                 padding: 3px 20px;
+                &:first-child{
+                    a{
+                        padding: 5px 15px 5px 0;
+                    }
+                }
+                &.active{
+                    background-color: @whiter;
+                    a{
+                        color: @red;
+                        padding: 5px 15px;
+                    }
+                }
                 @media only screen and (min-width: 780px) {
                     display: inline-block;
                     vertical-align: middle;
                     width: auto;
                     padding: 0;
-                    &:last-child{
-                        a{
-                            padding: 5px 0 5px 15px;
-                        }
-                    }
                 }
                 a{
-                    color: @white;
+                    color: lighten(@white, 4%);
                     display: block;
                     text-transform: uppercase;
-                    font-weight: lighter;
+                    font-family: @sans;
+                    font-weight: 900;
                     letter-spacing: 1px;
                     font-size: 14pt;
                     box-sizing: border-box;
@@ -149,7 +151,6 @@ header{
                     &:focus{
                         background-color: fade(@white, 3%);
                         @media only screen and (min-width: 780px) {
-                            color: lighten(@white, 50%);
                             background-color: transparent;
                             transition: @transition;
                         }
@@ -160,11 +161,8 @@ header{
                     @media only screen and (min-width: 780px) {
                         display: inline-block;
                         vertical-align: middle;
-                        padding: 5px 10px;
+                        padding: 5px 15px 5px 15px;
                         font-size: 9pt;
-                        font-weight: 400;
-                        margin-top: 26px;
-                        color: fade(@white, 80%);
                     }
                 }
             }

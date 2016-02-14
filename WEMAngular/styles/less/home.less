@@ -3,10 +3,7 @@
 @import 'variables.less';
 
 .home-new-mag{
-    background-color: lighten(@white, 4%);
     padding: 0 !important;
-    .shadow(2);
-
     .home-left{
         display: inline-block;
         width: 50%;
@@ -121,7 +118,7 @@
                 font-family: @serif;
                 font-weight: bolder;
                 letter-spacing: 1px;
-                font-size: 14pt;
+                font-size: 16pt;
                 margin: 0;
                 color: @text;
                 width: 100%;
@@ -194,52 +191,43 @@
 }
 
 
-.home-copy-left{
+#subscribe-physical{
+    background-color: @red;
+    color: @white;
+    box-sizing: border-box;
+    padding: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 12pt;
+    margin: 10px auto 0 auto;
+    display: block;
+    width: 180px;
+    text-align: center;
+    transition: @transition;
+    .shadow(1);
+    &:hover,
+    &:focus{
+        background-color: darken(@red, 5%);
+        transition: @transition;
+    }
+    &:active{
+        transition: @transition;
+        background-color: darken(@red, 10%);
+    }
+}
+#subscribe-physical-cancel{
     display: block;
     width: 100%;
-    p{
-        letter-spacing: 1px;
-        font-weight: 400;
-        font-size: 12pt;
-        line-height: 1.6em;
-    }
-    #subscribe-physical{
-        background-color: @red;
-        color: @white;
-        box-sizing: border-box;
-        padding: 15px 0;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: 400;
-        font-size: 12pt;
-        margin: 10px auto 0 auto;
-        display: block;
-        width: 180px;
-        text-align: center;
+    text-align: center;
+    color: fade(@black, 60%);
+    font-size: 8pt;
+    padding: 5px 0 0 0;
+    margin: 0 0 20px 0;
+    transition: @transition;
+    &:hover,
+    &:focus{
+        color: fade(@black, 80%);
         transition: @transition;
-        .shadow(1);
-        &:hover,
-        &:focus{
-            background-color: darken(@red, 5%);
-            transition: @transition;
-        }
-        &:active{
-            transition: @transition;
-            background-color: darken(@red, 10%);
-        }
-    }
-    #subscribe-physical-cancel{
-        display: block;
-        width: 100%;
-        text-align: center;
-        color: fade(@black, 60%);
-        font-size: 8pt;
-        padding: 5px 0 0 0;
-        transition: @transition;
-        &:hover,
-        &:focus{
-            color: fade(@black, 80%);
-            transition: @transition;
-        }
     }
 }
