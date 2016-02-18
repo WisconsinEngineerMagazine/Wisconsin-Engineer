@@ -1,26 +1,27 @@
 <div class="width-control">
     <div class="inner top contact">
-        <h1>Contact Us</h1>
+        <h1>ABOUT</h1>
         <p>
             Fill out the form below with general questions, story ideas... anything. We will try to get back to you within 48 hours!
         </p>
-        <form>
-            <div class="contact-input-wrap">
-                <label>Full Name</label>
-                <input type="text" ng-model="contactName">
-            </div><!--
-            --><div class="contact-input-wrap">
-                <label>Email Address</label>
-                <input type="text" ng-model="contactEmail">
-            </div>
-            <div class="contact-input-wrap full">
-                <textarea placeholder="What's on your mind..." ng-model="contactMessage"></textarea>
-            </div>
-            <div class="contact-input-wrap full">
-                <button class="btn-wem" ng-click="sendForm();" ng-disabled="messageSent">{{sendBtn}} <i class="ion-arrow-right-c"></i></button>
-                <small id="send-error" ng-show="sendFailed">We're gonna need you to fill everything in</small>
-            </div>
-        </form>
+
+        <div class="staff-display">
+            <div ng-repeat="person in staffWriting">{{person}}</div>
+        </div><!--
+        --><div class="staff-display">
+            <div ng-repeat="person in staffWeb">{{person}}</div>
+        </div><!--
+        --><div class="staff-display">
+            <div ng-repeat="person in staffBusiness">{{person}}</div>
+        </div><!--
+        --><div class="staff-display">
+            <div ng-repeat="person in staffGraphic">{{person}}</div>
+        </div><!--
+        --><div class="staff-display">
+            <div ng-repeat="person in staffPhotography">{{person}}</div>
+        </div>
+
+
     </div>
 </div>
 

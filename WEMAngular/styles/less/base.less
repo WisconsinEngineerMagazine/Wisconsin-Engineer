@@ -3,24 +3,7 @@
 @import 'variables.less';
 
 
-.div[ng-view].ng-enter, div[ng-view].ng-leave {
-    -webkit-transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.55s;
-    transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.55s;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-}
-div[ng-view].ng-enter {
-    -webkit-transform: translateY(100%) !important;
-}
-div[ng-view].ng-enter-active {
-    -webkit-transform: translateY(0);
-}
-div[ng-view].ng-leave {
-    -webkit-transform: translateY(0);
-}
-div[ng-view].ng-leave-active {
-    -webkit-transform: translateY(100%);
-}
+
 
 
 html{

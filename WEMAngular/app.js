@@ -213,6 +213,149 @@ wemApp.controller('aboutController', ['$scope',
     function($scope) {
 
 
+        $scope.staffWriting = [
+            "ALEX BELICH",
+            "KELSEY BRIGHT",
+            "ALEX CHAY",
+            "JACOB FREE",
+            "NATE FRIAR",
+            "BRANDON GRILL",
+            "CHRIS HANKO",
+            "MATTHEW LATUSZEK",
+            "SARA MANULIK",
+            "ANASTASIA MONTGOMERY",
+            "KELSEY MURPHY",
+            "EMILY MORZEWSKI",
+            "STEPHEN SCHWARTZ",
+            "YAMAN SANGER",
+            "BRIAN ZHOU"
+        ]
+
+
+         $scope.staffPhotography = [
+            "CHARLES FATUNBI",
+            "MATT HENRICKS",
+            "SAKURA KAWANO",
+            "SUMEET KATARIYA",
+            "KYLE PEDERSEN",
+            "MARGO LABIK",
+            "AMBER LIU",
+            "SHU PAN",
+            "JIELONG PENG",
+            "SETH REUTER",
+            "ROBIN RITCHEY",
+            "HEATHER SCHUMAKER",
+            "CODY SCHWARTZ",
+            "JUSTIN WILLIAMS",
+            "RYAN YAN"
+        ]
+
+        $scope.staffGraphic = [
+            "MOHAMMAD ALDOLAIJAN",
+            "CHRISTOPHER BRADLEY",
+            "MARGARET BUTZEN",
+            "VICKY HUANG",
+            "MAXWELL JIN",
+            "HELEN KEYES",
+            "YANGBO SHUI",
+            "TANAE SWENSON",
+            "TUSHAR VERMA"
+        ]
+
+        $scope.staffBusiness = [
+            "BRENDEN PITTMAN",
+            "PAUL MILLER",
+            "MATT GULLIXSON",
+            "TYLER LIBBEY"
+        ]
+
+        $scope.staffWeb = [
+            "Mitch Samuels",
+            "Sam Calmes"
+        ]
+
+
+        $scope.deptHeads = [
+            {
+                "name" : "ALEX STEINHAUER",
+                "department" : "Editor-in-chief",
+                "major" : "Mechanical Engineering",
+                "year" : "Senior"
+
+            },{
+                "name" : "NICK SCHOENHEIDER",
+                "department" : "Managing Editor",
+                "major" : "Industrial Engineering",
+                "year" : "Senior"
+
+            },{
+                "name" : "Will Myers",
+                "department" : "Business",
+                "major" : "Operations Management",
+                "year" : "Senior"
+
+            },{
+                "name" : "MATT GULLIXSON",
+                "department" : "Business",
+                "major" : "Geological Engineering",
+                "year" : "Senior"
+
+            },{
+                "name" : "ASON WAN",
+                "department" : "Graphic Design",
+                "major" : "Biomedical Engineering",
+                "year" : "Junior"
+
+            },{
+                "name" : "Brent Grimm",
+                "department" : "Graphic Design",
+                "major" : "Computer Engineering",
+                "year" : "Senior"
+
+            },{
+                "name" : "Nathaniel Corey",
+                "department" : "Photography",
+                "major" : "Mechanical Engineering",
+                "year" : "Junior"
+
+            },{
+                "name" : "HEATHER SHUMAKER",
+                "department" : "Photography",
+                "major" : "Biomedical Engineering",
+                "year" : "Junior"
+
+            },{
+                "name" : "Alyssa Hantzsch",
+                "department" : "Writing",
+                "major" : "Mechanical Engineering",
+                "year" : "Senior"
+
+            },{
+                "name" : "Justin Alt",
+                "department" : "Writing",
+                "major" : "Biomedical Engineering",
+                "year" : "Senior"
+
+            },{
+                "name" : "Charlie Duff",
+                "department" : "Writing",
+                "major" : "Mechanical Engineering",
+                "year" : "Senior"
+
+            },{
+                "name" : "MIKAELA O’KEEFE",
+                "department" : "Writing",
+                "major" : "Industrial Engineering",
+                "year" : "Junior"
+            },{
+                "name" : "Mitch Samuels",
+                "department" : "Web",
+                "major" : "Undecided",
+                "year" : "Junior"
+            }
+        ]
+
+
 
     }
 ]);
