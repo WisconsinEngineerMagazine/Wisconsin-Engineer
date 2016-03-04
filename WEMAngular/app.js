@@ -63,7 +63,18 @@ wemApp.controller('homeController', ['$scope', '$http', '$route',
             $scope.isMobile = false;
         }
 
-        $scope.homeBG="articles/content/images/mar16/where-should-i-study-today.jpg";
+
+        $scope.currentImages = [
+            "articles/content/images/mar16/ants-ants-antibiotics.jpg",
+            "articles/content/images/mar16/closer-look-at-optics.jpg",
+            "articles/content/images/mar16/foundry-feature.jpg",
+            "articles/content/images/mar16/preparing-for-engineering.jpg",
+            "articles/content/images/mar16/nuclear-fusion-not-just-science-fiction.jpg",
+            "articles/content/images/mar16/metrics-on-markets.jpg"
+        ]
+        $scope.homeBG = $scope.currentImages[Math.floor(Math.random() * $scope.currentImages.length)];
+
+
 
 
 

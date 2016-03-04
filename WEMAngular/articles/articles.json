@@ -5,7 +5,70 @@
         "author" : "Hanwook Chung",
         "excerpt" : "All the study spots that engineering students should know!",
         "issue" : "March 2016"
+    },{
+        "title" : "Epic and its Takeover",
+        "slug" : "mar16/epic-and-takeover",
+        "author" : "Krishna Patel",
+        "excerpt" : "The medical software company Epic has become a very valuable workplace for many UW-Madison graduates.",
+        "issue" : "March 2016"
+    },{
+        "title" : "Preparing for Engineering",
+        "slug" : "mar16/preparing-for-engineering",
+        "author" : "Emily Morzewski",
+        "excerpt" : "To be productive in any field, problem solving is the key.",
+        "issue" : "March 2016"
+    },{
+        "title" : "Nuclear Fusion: Not Just Science Fiction",
+        "slug" : "mar16/nuclear-fusion-not-just-science-fiction",
+        "author" : "Stephen Eick",
+        "excerpt" : "Key challenges surrounding nuclear fusion are being overcome by researchers at UW-Madison.",
+        "issue" : "March 2016"
+    },{
+        "title" : "Laser-Aided Machining: The Future of Manufacturing",
+        "slug" : "mar16/laser-aided-machining",
+        "author" : "Chris Hanko",
+        "excerpt" : "UW-Madison’s LAMSML wants to transform Laser-Aided machining from an art form to a Commercial manufacturing tool.",
+        "issue" : "March 2016"
+    },{
+        "title" : "A Closer Look at Optics",
+        "slug" : "mar16/closer-look-at-optics",
+        "author" : "Alex Chay",
+        "excerpt" : "Learn about Professor Mikhail Kats’s research in the field of optics.",
+        "issue" : "March 2016"
+    },{
+        "title" : "One Thing 'Lead' To Another: An Origin Story",
+        "slug" : "mar16/one-thing-lead-to-another",
+        "author" : "Mark Bodnar",
+        "excerpt" : "The history of mining in Wisconsin sheds light on the origins of an age-old rivalry.",
+        "issue" : "March 2016"
+    },{
+        "title" : "Professor Profile: Steven Zwickel",
+        "slug" : "mar16/profile-steven-zwickel",
+        "author" : "Brandon Grill",
+        "excerpt" : "We celebrate 20 years after Professor Zwickel's first day with the magazine!",
+        "issue" : "March 2016"
+    },{
+        "title" : "Quest for ANTibiotics",
+        "slug" : "mar16/ants-ants-antibiotics",
+        "author" : "Stacy Montgomery",
+        "excerpt" : "The search for new antibiotics has led UW researchers to study a peculiar relationship between ants and a fungus",
+        "issue" : "March 2016"
+    },{
+        "title" : "A Foundry Feature",
+        "slug" : "mar16/foundry-feature",
+        "author" : "Nathan Friar",
+        "excerpt" : "A look at one of UW-Madison’s modern ties to one of humanity’s oldest industries.",
+        "issue" : "March 2016"
+    },{
+        "title" : "Metrics on Markets",
+        "slug" : "mar16/metrics-on-markets",
+        "author" : "Madison Knobloch",
+        "excerpt" : "Professor Alfonso Morales is measuring how farmers markets impact their community.",
+        "issue" : "March 2016"
     },
+
+
+
 
 
     {
