@@ -1,11 +1,8 @@
 <div class="width-control">
     <div class="inner single-article">
-        <div class="single-image" style="background-image:url({{currentArticle.thumbnail_images.full.url}})"></div>
+        <div class="single-image" style="background-image:url({{imageUrl}})"></div>
         <div class="single-body">
-            <h1 ng-bind-html="currentArticle.title | unsafe"></h1>
-            <h3>By {{currentArticle.custom_fields.sfly_guest_author_names[0]}}</h3>
-            <span class="single-excerpt" ng-bind-html="currentArticle.excerpt | unsafe"></span>
-            <span class="single-content" ng-bind-html="currentArticle.content | unsafe"></span>
+            <div ng-include="directUrl"></div>
         </div>
     </div>
 </div>

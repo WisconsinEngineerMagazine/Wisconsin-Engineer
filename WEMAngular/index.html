@@ -3,13 +3,34 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-    <meta name="description" content="">
+    <meta name="description" content="Publishing amazing engineering-related content for the past 120 years! Run by and for the student of the University of Wisconsin, Madison!">
     <meta name="author" content="Mitch Samuels">
-    <meta name="keywords" content="">
-    <meta name="theme-color" content="#FFFFFF">
-    <link rel="shortcut icon" id="favicon" type="image/ico" href="favicon.png" />
+    <meta name="keywords" content="UW, Wisconsin, WI, Madison, Engineer, EGR, Engineering, wisc, computer, science, math, mechanical, magazine, articles, news">
+    <meta name="theme-color" content="#DD4B46">
+    <link rel="shortcut icon" id="favicon" type="image/ico" href="apple-touch-icon.png" />
 
     <title>Wisconsin Engineer</title>
+
+
+
+    <!-- Social Media Content -->
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="name" content="The Wisconsin Engineer Magazine">
+    <meta itemprop="description" content="Publishing amazing engineering-related content for the past 120 years! Run by and for the student of the University of Wisconsin, Madison!">
+
+    <!-- Mobile/Bookmark meta -->
+    <meta name="apple-mobile-web-app-title" content="Wisconsin Engineer">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=yes">
+
+    <link rel=”apple-touch-icon” href=”apple-touch-icon.png”/>
+    <link rel=”apple-touch-icon-precomposed” href=”apple-touch-icon.png”/>
+
+    <meta name="mobile-web-app-capable" content="yes">
+
+
 
 
     <!-- STYLES -->
@@ -21,8 +42,11 @@
     <link href='styles/css/404.css' rel='stylesheet' type='text/css'>
     <link href='styles/css/contact.css' rel='stylesheet' type='text/css'>
     <link href='styles/css/about.css' rel='stylesheet' type='text/css'>
+    <link href='styles/css/sell.css' rel='stylesheet' type='text/css'>
+    <link href='styles/css/generalpage.css' rel='stylesheet' type='text/css'>
 
     <!-- SCRIPTS -->
+    <script src="scripts/vendor/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="scripts/vendor/angular.min.js" type="text/javascript"></script>
     <script src="scripts/vendor/angular-route.min.js" type="text/javascript"></script>
     <script src="scripts/vendor/ngStorage.min.js" type="text/javascript"></script>
@@ -45,8 +69,14 @@
 
 
     <header>
-        <i class="ion-navicon" id="menu-btn" ng-click="toggleMenu()"></i>
-        <h1>Wisconsin<b>Engineer</b></h1>
+        <h1>
+            Wisconsin<b>Engineer</b>
+            <a href="https://www.facebook.com/WiscEngrMag" target="_blank"><i class="ion-social-facebook"></i></a>
+            <a href="https://twitter.com/WiscEngrMag" target="_blank"><i class="ion-social-twitter"></i></a>
+            <a href="https://www.instagram.com/thewisconsinengineer/" target="_blank"><i class="ion-social-instagram-outline"></i></a>
+            <a href="https://www.linkedin.com/groups/4322817" target="_blank"><i class="ion-social-linkedin"></i></a>
+            <i class="ion-navicon" id="menu-btn" ng-click="toggleMenu()"></i>
+        </h1>
         <nav id="main-nav">
             <ul>
                 <li ng-class="{active: $route.current.activetab == 'home'}"><a href="/#/">Home</a></li>
@@ -54,8 +84,20 @@
                 <li ng-class="{active: $route.current.activetab == 'about'}"><a href="/#/about">About</a></li>
                 <li ng-class="{active: $route.current.activetab == 'advertise'}"><a href="/#/advertise">Advertise</a></li>
                 <li ng-class="{active: $route.current.activetab == 'contact'}"><a href="/#/contact">Contact</a></li>
+                <li ng-class="{active: $route.current.activetab == 'photocontest'}"><a href="/#/photocontest" class="link-alert">PHOTO CONTEST!</a></li>
             </ul>
         </nav>
+        <nav id="mobile-nav" ng-click="closeMenu();" ng-if="isMobile">
+            <ul>
+                <li ng-class="{active: $route.current.activetab == 'home'}"><a href="/#/">Home</a></li>
+                <li ng-class="{active: $route.current.activetab == 'articles'}"><a href="/#/articles">Articles</a></li>
+                <li ng-class="{active: $route.current.activetab == 'about'}"><a href="/#/about">About</a></li>
+                <li ng-class="{active: $route.current.activetab == 'advertise'}"><a href="/#/advertise">Advertise</a></li>
+                <li ng-class="{active: $route.current.activetab == 'contact'}"><a href="/#/contact">Contact</a></li>
+                <li ng-class="{active: $route.current.activetab == 'photocontest'}"><a href="/#/photocontest" class="link-alert">PHOTO CONTEST!</a></li>
+            </ul>
+        </nav>
+        <i class="ion-ios-close-empty" id="menu-close" ng-click="closeMenu()" ng-if="isMobile"></i>
     </header>
 
     <div id="header-spacefix"></div>
@@ -74,7 +116,9 @@
         <p>
             All content copyright <script>document.write(new Date().getFullYear())</script> Wisconsin Engineer Magazine.
             <br>
-            <i class="ion-ios-location"></i> M1066 Engineering Centers Building, Madison WI <i class="ion-ios-email"></i> wiscengrmagazine@gmail.com <i class="ion-ios-telephone"></i> 608.262.3494
+            <i class="ion-ios-location"></i> M1066 Engineering Centers Building, Madison WI
+            <br>
+            <i class="ion-ios-email"></i> wiscengrmagazine@gmail.com <i class="ion-ios-telephone"></i> 608.262.3494
         </p>
     </footer>
 

@@ -1,23 +1,40 @@
 <div class="width-control">
-    <div class="inner top contact">
-        <h1>ABOUT</h1>
-        <p>
-            Fill out the form below with general questions, story ideas... anything. We will try to get back to you within 48 hours!
+    <div class="inner top about">
+        <h1>ABOUT US</h1>
+
+        <img id="team-photo" src="../assets/team.jpg">
+        <span class="about-header">Publishing amazing engineering-related content for the past <b>120</b> years.</span>
+
+        <p class="about-main-paragraph">
+            The Wisconsin Engineer magazine is student-run magazine at the University of Wisconsin, Madison. The magazine has been in print since 1896, and was one of the original five magazines to join Engineering College Magazines Associated (ECMA). It was set up as a non-profit organization in 1912 and continues to operate as a completely independent non-profit.
+            <br><br>
+            New issues are released four times each year - October, December, March, and May. The magazine is published for students and by students, and distributed for free throughout the University of Wisconsin campus. The staff size varies each semester but is normally right around 70 students. While all decisions within the organization are made by student leaders, we do have an advisor from UW Engineering Program - Steven Zwickel. The advisor also teaches a 1-credit called <b>Engineering Professional Development 690: Special Topics</b>, where students can earn credit for working with the magazine and completing additional coursework.
+            <br><br>
+            Our members must have an interest in graphic design, photography, writing, advertising, or business and must attend a biweekly meeting on Wednesday nights at 7:00 in Tong Auditorium in the Engineering Centers Building. If taking EPD 690 for a credit, one must also sell 2 subscriptions, make 2 distributions and attend one Eds and Heads meeting (which take place on alternating Wednesdays of the staff meetings).
+            <br><br>
+            All material in this publication is copyrighted. We are a member of the Associated Collegiate Press. Our publisher is American Printing Co.
         </p>
 
+        <h1 class="staff-header">Our Staff</h1>
+
         <div class="staff-display">
+            <div><h2>Writing</h2></div>
             <div ng-repeat="person in staffWriting">{{person}}</div>
         </div><!--
         --><div class="staff-display">
+            <div><h2>Web/Media</h2></div>
             <div ng-repeat="person in staffWeb">{{person}}</div>
         </div><!--
         --><div class="staff-display">
+            <div><h2>Business</h2></div>
             <div ng-repeat="person in staffBusiness">{{person}}</div>
         </div><!--
         --><div class="staff-display">
+            <div><h2>Graphic Design</h2></div>
             <div ng-repeat="person in staffGraphic">{{person}}</div>
         </div><!--
         --><div class="staff-display">
+            <div><h2>Photography</h2></div>
             <div ng-repeat="person in staffPhotography">{{person}}</div>
         </div>
 
@@ -29,11 +46,11 @@
     <div class="width-control">
         <div class="inner">
 
-            <h1 class="section-header">Come see us in person!</h1>
+            <h1 class="section-header">Interested in joining us?</h1>
             <p>
-                Our office is located in <b>room m1066</b> in the <b>Engineering Centers Building</b> at <b>1550 Engineering Dr, Madison, WI 53706</b>. There is only someone there a few hours each week, so call ahead before stopping by to make sure someone is there. Our phone number is 608.262.3494.
+                We're always looking for new people to join our staff! It doesn't matter if you're interested in writing, photography, graphic design, social media, or web development - we welcome all interested students to work with the team they prefer!
                 <br><br>
-                The entire Wisconsin Engineer staff meets every other week in <b>Tong Auditorium</b> in the Engineering Centers Building, and the department heads meet alone during off-weeks.
+                We have a kickoff meeting at the beginning of each semester to welcome new members and get them working on the right project. All students are welcome - even those not in an Engineering program!
             </p>
 
         </div>

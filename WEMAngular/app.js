@@ -6,7 +6,6 @@ wemApp.config(function($routeProvider, $locationProvider) {
 
     .when('/', {
         templateUrl : 'pages/home.html',
-        controller  : 'homeController',
         activetab: 'home'
     })
     .when('/articles', {
@@ -14,7 +13,7 @@ wemApp.config(function($routeProvider, $locationProvider) {
         controller  : 'articlesController',
         activetab: 'articles'
     })
-    .when('/articles/:article/:articleSlug', {
+    .when('/articles/:issue/:articleSlug', {
         templateUrl : 'pages/single.html',
         controller  : 'singleController',
         activetab: 'articles'
@@ -31,8 +30,13 @@ wemApp.config(function($routeProvider, $locationProvider) {
         activetab: 'about'
     })
     .when('/advertise', {
-        templateUrl : 'pages/advertise.html',
+        templateUrl : 'pages/sell.html',
+        controller  : 'advertiseController',
         activetab: 'advertise'
+    })
+    .when('/photocontest', {
+        templateUrl : 'pages/photocontest.html',
+        activetab: 'photocontest'
     })
     .when('/40404040404040404!!!!', {
         templateUrl : 'pages/fourohfour.html'
@@ -42,38 +46,31 @@ wemApp.config(function($routeProvider, $locationProvider) {
 });
 
 
-
-
-wemApp.factory("getWP", ['$http',function($http){
-    var obj = {};
-
-    obj.fetchArticles = function(){
-        return $http.get('http://wisconsinengineer.com/?json=1');
-    }
-
- return obj;
-}]);
-
-
 // Home page controller
-wemApp.controller('homeController', ['$scope', '$http', '$route', 'getWP',
-    function($scope, $http, $route, getWP) {
+wemApp.controller('homeController', ['$scope', '$http', '$route',
+    function($scope, $http, $route) {
 
         $scope.$route = $route;
 
+
+
         // Menu controller, used across all pages
-        $scope.toggleMenu = function(){
-            $("#main-nav").slideToggle();
-            $("#menu-btn").toggleClass("ion-navicon").toggleClass("ion-ios-close-empty");
+        $scope.isMobile = false;
+        $scope.toggleMenu = function () {
+            $scope.isMobile = true;
+        }
+        $scope.closeMenu = function () {
+            $scope.isMobile = false;
         }
 
-        $scope.homeBG="https://static.pexels.com/photos/420/industry-rails-train-path.jpg";
+        $scope.homeBG="articles/content/images/mar16/where-should-i-study-today.jpg";
 
 
-        getWP.fetchArticles().success(function(response){
-            $scope.homeArticles = response.posts.slice(0,4);
-            $scope.wpArticles = response.posts;
-            console.log($scope.wpArticles)
+
+        $scope.homeArticles = null;
+        $http.get('articles/articles.json').success(function(data) {
+            $scope.homeArticles = data.slice(0,4);;
+            $scope.allArticles = data;
         });
 
 
@@ -95,8 +92,8 @@ wemApp.controller('homeController', ['$scope', '$http', '$route', 'getWP',
 ]);
 
 // Articles page controller
-wemApp.controller('articlesController', ['$scope', '$location', '$anchorScroll', '$sessionStorage', 'getWP',
-    function($scope, $location, $anchorScroll, $sessionStorage, getWP) {
+wemApp.controller('articlesController', ['$scope', '$location', '$http', '$anchorScroll', '$sessionStorage',
+    function($scope, $location, $http, $anchorScroll, $sessionStorage) {
 
 
 
@@ -105,19 +102,20 @@ wemApp.controller('articlesController', ['$scope', '$location', '$anchorScroll',
         //     $anchorScroll();
         // }
 
-        if($sessionStorage.scrollPos){$scope.articleLimit = $sessionStorage.scrollPos;}else{$scope.articleLimit = 2;}
+        if($sessionStorage.scrollPos){$scope.articleLimit = $sessionStorage.scrollPos;}else{$scope.articleLimit = 10;}
+
 
 
         $scope.loadButtonText = "Load more articles...";
         $scope.endOfList = false;
         $scope.loadMoreArticles = function(){
-            $scope.articleLimit = $scope.articleLimit + 2;
+            $scope.articleLimit = $scope.articleLimit + 10;
             $sessionStorage.scrollPos = $scope.articleLimit;
             $scope.checkForEnd();
         }
 
         $scope.checkForEnd = function(){
-            if($scope.articleLimit >= $scope.wpArticles.length - 1){
+            if($scope.articleLimit >= $scope.allArticles.length){
                 $scope.loadButtonText = "You've reached the end";
                 $scope.endOfList = true;
             }
@@ -134,17 +132,32 @@ wemApp.controller('articlesController', ['$scope', '$location', '$anchorScroll',
 
 
 // Single page controller
-wemApp.controller('singleController', ['$scope', '$rootScope', '$route', '$routeParams', 'getWP',
-    function($scope, $rootScope, $route, $routeParams, getWP) {
+wemApp.controller('singleController', ['$scope', '$rootScope', '$route', '$routeParams',
+    function($scope, $rootScope, $route, $routeParams) {
 
-        $scope.currentArticle = $routeParams.article;
+        $scope.slug = $routeParams.articleSlug;
+        $scope.issue = $routeParams.issue;
+        $scope.totalSlug = $scope.issue + "/" + $scope.slug;
+        $scope.imageUrl = "../articles/content/images/"+$scope.totalSlug+".jpg";
+        $scope.directUrl = "../articles/content/"+$scope.totalSlug+".html";
 
-        getWP.fetchArticles().success(function(response){
-            $scope.currentArticle = response.posts[$scope.currentArticle];
-            console.log($scope.currentArticle)
-        });
+
+        console.log($scope.issue);
 
 
+        // Images
+        // if($scope.issue === "December 2015"){
+        //     $scope.imageUrl = "../articles/content/images/dec15/"+$scope.slug+".jpg";
+        // }else if($scope.issue === "March 2016"){
+        //     $scope.imageUrl = "../articles/content/images/mar16/"+$scope.slug+".jpg";
+        // }
+        //
+        // // Direct Links
+        // if($scope.issue === "December 2015"){
+        //     $scope.directUrl = "../articles/content/dec15/"+$scope.slug+".html";
+        // }else if($scope.issue === "March 2016"){
+        //     $scope.directUrl = "../articles/content/mar16/"+$scope.slug+".html";
+        // }
 
     }
 ]);
@@ -180,7 +193,7 @@ wemApp.controller('contactController', ['$scope', '$http',
                         'from_name': $scope.contactName,
                         'to': [
                             {
-                                'email': 'samuels.mitch@gmail.com',
+                                'email': 'wiscengrmagazine@gmail.com',
                                 'name': 'Mitch Samuels',
                                 'type': 'to'
                             }
@@ -359,6 +372,16 @@ wemApp.controller('aboutController', ['$scope',
 
     }
 ]);
+
+
+
+// Single page controller
+wemApp.controller('advertiseController', ['$scope', '$rootScope', '$route', '$routeParams', 'getWP',
+    function($scope, $rootScope, $route, $routeParams, getWP) {
+    }
+]);
+
+
 
 
 wemApp.filter('unsafe', function($sce) { return $sce.trustAsHtml; });

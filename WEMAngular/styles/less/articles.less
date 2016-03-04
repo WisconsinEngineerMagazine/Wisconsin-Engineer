@@ -9,35 +9,58 @@
         box-sizing: border-box;
         vertical-align: top;
         border-right: 1px solid fade(@black, 20%);
-        width: 50%;
+        width: 100%;
+        @media only screen and (min-width: 666px) {
+            width: 50%;
+        }
         &:nth-child(even){
             border-right: none;
         }
         .article-item-img{
             display: block;
             width: 100%;
-            height: 300px;
-            background-color: red;
+            height: 240px;
             background-size: cover;
             background-position: center center;
             overflow: none;
         }
         .article-item-body{
             width: 100%;
-            height: 300px;
-            padding: 0 45px;
+            height: auto;
             box-sizing: border-box;
+            padding: 0 15px 35px 15px;
             display: flex;
             flex-direction: column;
             justify-content: top;
+            @media only screen and (min-width: 666px) {
+                padding: 0 15px;
+                height: 320px;
+            }
+
+            @media only screen and (min-width: 900px) {
+                padding: 0 45px;
+            }
+
+            h6{
+                display: block;
+                font-size: 10pt;
+                letter-spacing: 0.5px;
+                margin: 30px 0 0 0;
+                font-family: @serif;
+                font-weight: bolder;
+                color: fade(@text, 50%);
+                box-sizing: border-box;
+                padding: 0 0 5px 0;
+                border-bottom: 1px solid fade(@black, 10%);
+            }
             a{
                 display: block;
                 width: 100%;
-                font-size: 16pt;
+                font-size: 13pt;
                 font-family: @serif;
                 color: @text;
                 font-weight: bolder;
-                padding: 35px 0 20px 0;
+                padding: 25px 0 20px 0;
                 transition: @transition;
                 &:hover,
                 &:focus{
@@ -55,14 +78,12 @@
                 width: 100%;
                 padding: 0;
                 margin: 0 auto;
-                p{
-                    font-size: 12pt;
+                    font-size: 10.5pt;
                     margin: 0 auto;
                     padding: 0;
                     letter-spacing: -.05px;
                     color: fade(@text, 70%);
                     font-weight: 400;
-                }
             }
             h3{
                 display: block;
@@ -114,63 +135,122 @@
     box-shadow: @redshadow;
     .single-image{
         width: 100%;
-        height: 360px;
+        height: 260px;
         display: block;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        @media only screen and (min-width: 700px) {
+            height: 360px;
+        }
     }
     .single-body{
         display: block;
+        padding: 45px 15px;
         width: 100%;
-        padding: 65px 50px;
         box-sizing: border-box;
+        @media only screen and (min-width: 700px) {
+            padding: 65px 50px;
+        }
         h1{
             display: block;
             width: 100%;
-            font-size: 20pt;
+            font-size: 16pt;
             font-family: @serif;
             color: @text;
             font-weight: bolder;
+            @media only screen and (min-width: 700px) {
+                font-size: 20pt;
+            }
+        }
+        h2{
+            font-family: @serif;
+            font-size: 14pt;
+            font-weight: bolder;
+            color: @text;
+            letter-spacing: 1px;
+            box-sizing: border-box;
+            padding: 10px 0 0 0;
         }
         h3{
             display: block;
             width: 100%;
-            padding: 10px 0 25px 0;
+            padding: 10px 0 5px 0;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 900;
-            font-size: 8pt;
+            font-size: 9pt;
+            color: fade(@text, 50%);
+            @media only screen and (min-width: 700px) {
+                font-size: 11pt;
+            }
+        }
+        h4{
+            display: block;
+            width: 100%;
+            padding: 10px 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 900;
+            font-size: 12pt;
             color: fade(@text, 30%);
         }
-        .single-excerpt{
-            p{
+        img{
+            width: 90%;
+            margin: 20px auto 5px auto;;
+            height: auto;
+            display: block;
+        }
+        label{
+            font-size: 8pt;
+            font-weight: bolder;
+            display: block;
+            width: 90%;
+            text-align: right;
+            margin: 0 auto 20px auto;
+        }
+        blockquote{
+            background-color: fade(@red, 3%);
+            display: block;
+            padding: 25px;
+            border-left: 5px solid fade(@red, 50%);
+            font-weight: bolder;
+            line-height: 1.5em;
+            font-size: 12pt;
+            font-family: @serif;
+            font-style: italic;
+            color: fade(@black, 80%);
+            margin: 15px auto;
+            box-sizing: border-box;
+            @media only screen and (min-width: 700px) {
                 font-size: 16pt;
-                font-family: @serif;
-                font-weight: 500;
-                line-height: 1.8em;
-                color: fade(@text, 80%);
                 padding: 8px 0;
-                font-style: italic;
+                padding: 45px;
+            }
+        }
+        .single-excerpt{
+            font-size: 12pt;
+            font-family: @serif;
+            font-weight: 500;
+            line-height: 1.8em;
+            color: fade(@text, 80%);
+            padding: 4px 0;
+            font-style: italic;
+            @media only screen and (min-width: 700px) {
+                font-size: 16pt;
+                padding: 8px 0;
             }
         }
         .single-content{
-            p{
-                font-size: 11pt;
-                font-family: @serif;
-                font-weight: 500;
+            font-size: 8.75pt;
+            font-family: @serif;
+            font-weight: 500;
+            line-height: 1.75em;
+            color: fade(@text, 80%);
+            padding: 8px 0;
+            @media only screen and (min-width: 700px) {
+                font-size: 9.5pt;
                 line-height: 2em;
-                color: fade(@text, 80%);
-                padding: 8px 0;
-                img{
-                    max-width: 100%;
-                    max-height: 400px;
-                    height: auto;
-                    width: auto;
-                    margin: 0 auto;
-                    display: block;
-                    border: 1px solid fade(@text, 50%);
-                }
             }
         }
     }

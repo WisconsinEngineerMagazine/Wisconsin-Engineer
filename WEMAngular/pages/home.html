@@ -1,10 +1,10 @@
 <div class="width-control">
     <div class="inner top home-new-mag">
-        <div class="home-left">
+        <div class="home-left" style="background-image: url({{homeBG}});">
 
             <h1>Latest Issue:</h1>
             <h2><b>December 2015</b>Volume 120, Issue 1</h2>
-            <a href="#" id="read-latest">Pick up a copy</a>
+            <a href="/#/articles" id="read-latest">Read Now</a>
 
 
         </div><!--
@@ -21,13 +21,13 @@
         <div class="inner">
             <h1 class="section-header">Latest Articles</h1>
             <div class="home-articles">
-                <div class="article" ng-repeat="article in homeArticles track by $index">
-                    <div class="article-image" ng-style="{'background-image':'url({{article.thumbnail_images.full.url}})'}">
+                <div class="article" ng-repeat="article in homeArticles">
+                    <div class="article-image" ng-style="{'background-image':'url(../articles/content/images/{{article.slug}}.jpg)'}">
                     </div><!--
                     --><div class="article-body">
-                        <a href="/#/articles/{{$index}}/{{article.slug}}"><u ng-bind-html="article.title | unsafe"></u></a>
-                        <span ng-bind-html="article.excerpt | unsafe"></span>
-                        <h3>By {{article.custom_fields.sfly_guest_author_names[0]}}</h3>
+                        <a href="/#/articles/{{article.slug}}"><u>{{article.title}}</u></a>
+                        <p>{{article.excerpt}}</p>
+                        <h3>By {{article.author}}</h3>
                     </div>
                 </div>
             </div>

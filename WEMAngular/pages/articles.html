@@ -1,13 +1,16 @@
 <div class="width-control" ng-init="checkForEnd();">
     <!-- <input type="text" ng-model="search.title" /> -->
     <div class="inner top article-list">
-        <div class="article-item" ng-repeat="article in wpArticles | filter: search | limitTo: articleLimit track by $index  ">
-            <a href="/#/articles/{{$index}}/{{article.slug}}" class="article-item-img" ng-style="{'background-image':'url({{article.thumbnail_images.full.url}})'}"></a>
+        <div class="article-item" ng-repeat="article in allArticles | filter: search | limitTo: articleLimit track by $index  ">
+
+            <a href="/#/articles/{{article.slug}}" class="article-item-img" ng-style="{'background-image':'url(../articles/content/images/{{article.slug}}.jpg)'}"></a>
+
             <!-- <a href="/#/articles/{{$index}}" class="article-item-img" ng-style="{'background-image':'url({{article.attachments[0].url}})'}"></a> -->
             <div class="article-item-body">
-                <a href="/#/articles/{{$index}}/{{article.slug}}" ng-bind-html="article.title | unsafe"></a>
-                <span class="article-item-excerpt" ng-bind-html="article.excerpt | unsafe"></span>
-                <h3>By {{article.custom_fields.sfly_guest_author_names[0]}}</h3>
+                <h6>{{article.issue}}</h6>
+                <a href="/#/articles/{{article.slug}}">{{article.title}}</a>
+                <span class="article-item-excerpt">{{article.excerpt}}</span>
+                <h3>By {{article.author}}</h3>
             </div>
         </div>
         <div id="list-load-more" ng-click="loadMoreArticles()" ng-class="{'disabled' : endOfList}">

@@ -21,53 +21,17 @@ header{
     @media only screen and (min-width: 700px) {
         padding: 5px 12% 0 12%;
     }
+    @media only screen and (min-width: 800px) {
+        padding: 5px 12% 0 12%;
+    }
     @media only screen and (min-width: 1000px) {
         padding: 5px 15% 0 15%;
     }
-    #menu-btn{
-        height: @headerheight;
-        width: @headerheight;
-        float: right;
-        text-align: center;
-        color: lighten(@white, 4%);
-        box-sizing: border-box;
-        padding: 12px 0px 0 0;
-        font-size: 52px;
-        display: block;
-        &.ion-ios-close-empty{
-            padding: 7px 0px 0 0;
-            font-size: 60px;
-            background-color: @black;
-            &:hover{
-                cursor: pointer;
-                transition: @transition;
-                background-color: darken(@black, 2%);
-            }
-            &:focus{
-                transition: @transition;
-                background-color: darken(@black, 2%);
-            }
-            &:active{
-                transition: @transition;
-                background-color: darken(@black, 4%);
-            }
-        }
-        &:hover{
-            cursor: pointer;
-            transition: @transition;
-            background-color: fade(@black, 8%);
-        }
-        &:focus{
-            transition: @transition;
-            background-color: fade(@black, 8%);
-        }
-        &:active{
-            transition: @transition;
-            background-color: fade(@black, 15%);
-        }
-        @media only screen and (min-width: 780px) {
-            display: none;
-        }
+    @media only screen and (min-width: 1300px) {
+        padding: 5px 20% 0 20%;
+    }
+    @media only screen and (min-width: 1500px) {
+        padding: 5px 25% 0 25%;
     }
     h1{
         color: lighten(@white, 4%);
@@ -75,40 +39,80 @@ header{
         box-sizing: border-box;
         padding: 5px 0;
         font-size: 22pt;
+        display: block;
+        width: 100%;
         line-height: 0.9em;
-        font-weight: 100;
+        font-weight: 300;
         text-transform: uppercase;
-        padding: 12px 0 0 15px;
+        padding: 12px 0 0 0px;
         letter-spacing: -1px;
-        @media only screen and (min-width: 450px) {padding: 18px 0 0 0}
         b{
             font-weight: 900;
             letter-spacing: 1.05px;
             margin: 0 0 0 3px;
+            @media only screen and (max-width: 450px) {
+                display: block;
+            }
         }
+        a{
+            float: right;
+            color: @white;
+            font-size: 16pt;
+            margin: 0 0 0 22px;
+            transition: 0.1s;
+            &:hover{
+                cursor: pointer;
+                color: fade(@white, 80%);
+                transition: 0.1s;
+            }
+            // HIDE SOCIAL ON MOBILE
+            @media only screen and (max-width: 800px) {
+                display: none;
+            }
+        }
+
+        // CENTER WEM
+        @media only screen and (max-width: 800px) {
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 16pt;
+            padding: 18px 0 5px 0;
+        }
+
     }
     nav{
         position: relative;;
-        padding: 6px 0 6px 0;
+        position: fixed;
+        background-color: fade(@black, 93%);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
         display: none;
-        background-color: transparent;
-        // background-color: lighten(@white, 4%);
-        .shadow(2);
-        margin: 15px 0 0 0;
-        .shadow(2);
-        @media only screen and (min-width: 780px) {
+        justify-content: center;
+        flex-direction: column;
+
+        @media only screen and (min-width: 800px) {
+            position: relative;
+            height: auto;
             display: block;
             box-shadow: none;
+            background-color: transparent !important;
+            margin: 15px 0 0 0;
         }
-
         ul{
             box-sizing: border-box;
             height: auto;
             margin: 0 auto;
-            padding: 0;
+            padding: 0 0 20% 0;
             list-style-type: none;
-            @media only screen and (min-width: 780px) {
+            width: 260px;
+            @media only screen and (min-width: 800px) {
                 display: inline-block;
+                width: auto;
+                padding: 0;
                 vertical-align: middle;
             }
             li{
@@ -118,54 +122,139 @@ header{
                 padding: 3px 20px;
                 &:first-child{
                     a{
-                        padding: 5px 15px 5px 0;
+                        @media only screen and (min-width: 800px) {
+                            padding: 5px 15px 5px 0;
+                        }
                     }
                 }
                 &.active{
-                    background-color: @whiter;
+                    @media only screen and (min-width: 800px) {
+                        background-color: @whiter;
+                    }
                     a{
                         color: @red;
-                        padding: 5px 15px;
+                        @media only screen and (min-width: 800px) {
+                            padding: 2px 15px;
+                            color: @red;
+                        }
                     }
                 }
-                @media only screen and (min-width: 780px) {
+                @media only screen and (min-width: 800px) {
                     display: inline-block;
                     vertical-align: middle;
                     width: auto;
                     padding: 0;
                 }
                 a{
-                    color: lighten(@white, 4%);
                     display: block;
+                    color: @white;
+                    padding: 7px 0;
+                    margin: 4px 0;
                     text-transform: uppercase;
                     font-family: @sans;
                     font-weight: 900;
-                    letter-spacing: 1px;
-                    font-size: 14pt;
+                    letter-spacing: 0.5px;
                     box-sizing: border-box;
-                    padding: 10px 40px;
                     width: 100%;
+                    font-size: 13pt;
                     text-align: center;
                     line-height: 100%;
+
+                    &.link-alert{
+                        &:after{
+                            content: '\f24e';
+                            color: #FBDD76;
+                            font-family: @ionicons;
+                            padding: 0 0 0 3px;
+                        }
+                    }
+
                     &:hover,
                     &:focus{
-                        background-color: fade(@white, 3%);
-                        @media only screen and (min-width: 780px) {
+                        text-decoration: underline;
+                        @media only screen and (min-width: 800px) {
                             background-color: transparent;
                             transition: @transition;
                         }
                     }
-                    &:active{
-                        background-color: fade(@white, 6%);
-                    }
-                    @media only screen and (min-width: 780px) {
+                    @media only screen and (min-width: 800px) {
+                        color: lighten(@white, 4%);
                         display: inline-block;
                         vertical-align: middle;
-                        padding: 5px 15px 5px 15px;
-                        font-size: 9pt;
+                        padding: 5px 12px 5px 12px;
+                        font-size: 8.25pt;
                     }
                 }
             }
+        }
+    }
+
+    #mobile-nav{
+        display: none;
+        @media only screen and (max-width: 800px) {
+            display: flex;
+        }
+    }
+
+    #menu-btn{
+        font-size: 26pt;
+        float: right;
+        vertical-align: top;
+        margin: 0 25px 0 0;
+        position: relative;
+        top: -36px;
+        color: @white;
+
+        &:hover,
+        &:focus{
+            cursor: pointer;
+            color: fade(@white, 80%);
+        }
+
+        &:active{
+            cursor: pointer;
+            color: fade(@white, 60%);
+        }
+
+        @media only screen and (min-width: 450px) {
+            float: right;
+            position: relative;
+            top: -7px;
+        }
+
+        @media only screen and (min-width: 800px) {
+            display: none;
+        }
+    }
+    #menu-close{
+        font-size: 48pt;
+        float: right;
+        position: relative;
+        color: @white;
+        position: fixed;
+        top: 0;
+        right: 0;
+        top: -8px;
+        box-sizing: border-box;
+        height: 100px;
+        width: 100px;
+        padding: 20px 0 0 0;
+        text-align: center;
+        z-index: 10000;
+
+        &:hover,
+        &:focus{
+            cursor: pointer;
+            color: fade(@white, 80%);
+        }
+
+        &:active{
+            cursor: pointer;
+            color: fade(@white, 60%);
+        }
+
+        @media only screen and (min-width: 800px) {
+            display: none;
         }
     }
 }
