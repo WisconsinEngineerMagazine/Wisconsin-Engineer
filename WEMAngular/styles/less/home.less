@@ -248,6 +248,9 @@
     }
 }
 
+#subscribe-form{
+    margin: 0 auto;
+}
 
 #subscribe-physical{
     background-color: @red;
@@ -259,6 +262,7 @@
     font-weight: 400;
     font-size: 12pt;
     margin: 18px auto 0 auto;
+    border: none;
     display: block;
     width: 180px;
     text-align: center;
@@ -266,6 +270,7 @@
     .shadow(1);
     &:hover,
     &:focus{
+        cursor: pointer;
         background-color: darken(@red, 5%);
         transition: @transition;
     }

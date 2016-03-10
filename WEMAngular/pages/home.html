@@ -3,7 +3,7 @@
         <div class="home-left" style="background-image: url({{homeBG}});">
 
             <h1>Latest Issue:</h1>
-            <h2><b>December 2015</b>Volume 120, Issue 1</h2>
+            <h2><b>March 2016</b>Volume 120, Issue 2</h2>
             <a href="/#/articles" id="read-latest">Read Now</a>
 
 
@@ -46,8 +46,12 @@
             <p>
                 Support over 100 years of student journalism and get the Wisconsin Engineer delivered straight to your door.  It's only $12 per year (4 issues).
             </p>
-            <a href="#" id="subscribe-physical">Sign Up Now</a>
-            <a href="#" id="subscribe-physical-cancel">Or cancel your subscription</a>
+            <form id="subscribe-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="NR4ADY8KL87U6">
+                <button id="subscribe-physical" class="subscribe-print" name="submit">Sign up now</button>
+            </form>
+            <a target="_blank" id="subscribe-physical-cancel" href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=Z9RDVPM578HBC">Or cancel your subscription</a>
             <p>
                 You can pick up a free copy of the Wisconsin Engineer in many buildings on campus, including <b>Union South, Memorial Union, Holt, Steenbock, College Library, The University Bookstore, Witte, Sellery, Ogg, Liz Waters, Carson's, Engineering Hall, Mickie's Dairy Bar</b> and many more.
             </p>

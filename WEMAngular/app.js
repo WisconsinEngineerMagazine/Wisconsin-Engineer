@@ -72,7 +72,8 @@ wemApp.controller('homeController', ['$scope', '$http', '$route',
             "articles/content/images/mar16/nuclear-fusion-not-just-science-fiction.jpg",
             "articles/content/images/mar16/metrics-on-markets.jpg"
         ]
-        $scope.homeBG = $scope.currentImages[Math.floor(Math.random() * $scope.currentImages.length)];
+        // $scope.homeBG = $scope.currentImages[Math.floor(Math.random() * $scope.currentImages.length)];
+        $scope.homeBG = "articles/content/images/mar16/foundry-feature.jpg";
 
 
 
@@ -105,6 +106,9 @@ wemApp.controller('homeController', ['$scope', '$http', '$route',
 // Articles page controller
 wemApp.controller('articlesController', ['$scope', '$location', '$http', '$anchorScroll', '$sessionStorage',
     function($scope, $location, $http, $anchorScroll, $sessionStorage) {
+
+        ga('send', 'pageview', '/articles');
+
 
 
 
@@ -146,6 +150,9 @@ wemApp.controller('articlesController', ['$scope', '$location', '$http', '$ancho
 wemApp.controller('singleController', ['$scope', '$rootScope', '$route', '$routeParams',
     function($scope, $rootScope, $route, $routeParams) {
 
+        ga('send', 'pageview', '/singlearticle');
+
+
         $scope.slug = $routeParams.articleSlug;
         $scope.issue = $routeParams.issue;
         $scope.totalSlug = $scope.issue + "/" + $scope.slug;
@@ -179,6 +186,7 @@ wemApp.controller('contactController', ['$scope', '$http',
     function($scope, $http) {
 
 
+        ga('send', 'pageview', '/contact');
 
 
 
@@ -235,6 +243,8 @@ wemApp.controller('contactController', ['$scope', '$http',
 // About page controller
 wemApp.controller('aboutController', ['$scope',
     function($scope) {
+
+        ga('send', 'pageview', '/about');
 
 
         $scope.staffWriting = [
@@ -389,6 +399,8 @@ wemApp.controller('aboutController', ['$scope',
 // Single page controller
 wemApp.controller('advertiseController', ['$scope', '$rootScope', '$route', '$routeParams', 'getWP',
     function($scope, $rootScope, $route, $routeParams, getWP) {
+        ga('send', 'pageview', '/advertise');
+
     }
 ]);
 
