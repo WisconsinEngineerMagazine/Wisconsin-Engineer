@@ -43,6 +43,11 @@ wemApp.config(function($routeProvider, $locationProvider) {
     })
     .otherwise('/40404040404040404!!!!')
 
+    // $locationProvider.html5Mode({
+    //   enabled: true,
+    //   requireBase: false
+    // });
+
 });
 
 
