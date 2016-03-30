@@ -1,0 +1,35 @@
+<div class="width-control">
+    <div class="inner top staff">
+        <h1>Staff Information</h1>
+        <div class = "staff-main-paragraph">
+          <p>Meeting locations:</br>Eds &amp; Heads: 1045 ECB</br>All Staff Meetings: Tong Auditorium (1003 ECB) </p>
+        </div>
+        <div class="staff-display">
+            <div><h2>Date</h2></div>
+            <div ng-repeat="date in dates">{{date.date}}</div>
+        </div>
+        <div class="staff-display">
+            <div><h2>Meeting</h2></div>
+            <div ng-repeat="date in dates">{{date.meeting}}</div>
+        </div>
+        <div class="staff-display">
+            <div><h2>Notice:</h2></div>
+            <div ng-repeat="date in dates">{{date.homework}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="full-width white has-shadow">
+    <div class="width-control">
+        <div class="inner">
+
+            <h1 class="section-header">Interested in joining us?</h1>
+            <p>
+                We're always looking for new people to join our staff! It doesn't matter if you're interested in writing, photography, graphic design, social media, or web development - we welcome all interested students to work with the team they prefer!
+                <br><br>
+                We have a kickoff meeting at the beginning of each semester to welcome new members and get them working on the right project. All students are welcome - even those not in an Engineering program!
+            </p>
+
+        </div>
+    </div>
+</div>

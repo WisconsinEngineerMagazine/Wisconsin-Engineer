@@ -38,6 +38,11 @@ wemApp.config(function($routeProvider, $locationProvider) {
         templateUrl : 'pages/photocontest.html',
         activetab: 'photocontest'
     })
+    .when('/staff', {
+        templateUrl : 'pages/staff.html',
+        controller : 'staffController',
+        activetab: 'Staff'
+    })
     .when('/40404040404040404!!!!', {
         templateUrl : 'pages/fourohfour.html'
     })
@@ -399,7 +404,97 @@ wemApp.controller('aboutController', ['$scope',
     }
 ]);
 
+//Staff page controller
+wemApp.controller('staffController', ['$scope',
+    function($scope) {
 
+        ga('send', 'pageview', '/staff');
+
+        $scope.dates = [
+          {
+            "date" : "January 27",
+            "meeting" : "All Staff Kickoff",
+            "homework" : "--"
+          },
+          {
+            "date" : "February 3",
+            "meeting" : "All Staff",
+            "homework" : "--"
+          },
+          {
+            "date" : "February 10",
+            "meeting" : "Eds & Heads: Graphic Design",
+            "homework" : "--"
+          },
+          {
+            "date" : "February 17",
+            "meeting" : "All Staff",
+            "homework" : "Homework #1"
+          },
+          {
+            "date" : "February 24",
+            "meeting" : "Eds and Heads: Business",
+            "homework" : "--"
+          },
+          {
+            "date" : "March 2",
+            "meeting" : "All Staff",
+            "homework" : "Homework #2"
+          },
+          {
+            "date" : "March 9",
+            "meeting" : "Eds & Heads: Web",
+            "homework" : "--"
+          },
+          {
+            "date" : "March 16",
+            "meeting" : "All Staff",
+            "homework" : "Homework #3"
+          },
+          {
+            "date" : "March 23",
+            "meeting" : "Spring Break!",
+            "homework" : "--"
+          },
+          {
+            "date" : "March 30",
+            "meeting" : "Eds & Heads: Photography",
+            "homework" : "--"
+          },
+          {
+            "date" : "April 6",
+            "meeting" : "All Staff",
+            "homework" : "--"
+          },
+          {
+            "date" : "April 13",
+            "meeting" : "Eds & Heads: Writing",
+            "homework" : "--"
+          },
+          {
+            "date" : "April 15/16",
+            "meeting" : "Engineering Expo (Please Volunteer)",
+            "homework" : "--"
+          },
+          {
+            "date" : "April 20",
+            "meeting" : "All Staff",
+            "homework" : "Homework #4"
+          },
+          {
+            "date" : "April 27",
+            "meeting" : "Eds & Heads: Semester Planning",
+            "homework" : "--"
+          },
+          {
+            "date" : "May 4",
+            "meeting" : "All Staff",
+            "homework" : "Homework #5 Semester Summary"
+          },
+
+        ]
+    }
+]);
 
 // Single page controller
 wemApp.controller('advertiseController', ['$scope', '$rootScope', '$route', '$routeParams', 'getWP',
