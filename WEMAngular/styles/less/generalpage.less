@@ -17,17 +17,17 @@
         }
     }
 
-    .general-header{
+    h2{
         display: block;
         width: 100%;
         text-align: left;
-        margin: 0 auto 35px auto;
-        font-weight: 300;
+        margin: 20px auto 35px auto;
+        font-weight: bolder;
         letter-spacing: 1px;
-        font-size: 13pt;
+        font-size: 10pt;
 
         @media only screen and (min-width: 850px) {
-            font-size: 22pt;
+            font-size: 12pt;
             text-align: center;
             width: 70%;
         }
@@ -108,4 +108,36 @@
 
 
 
+}
+
+
+
+// PHOTOGALLERY
+
+.simple-gallery{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 4px;
+
+    a{
+        display: inline-block;
+        width: 20%;
+        box-sizing: border-box;
+        padding: 4px;
+        margin: 0 auto;
+
+        img{
+            width: 100%;
+            -webkit-filter: grayscale(80%) brightness(120%);
+            filter: grayscale(80%) brightness(120%);
+            transition: @transition;
+
+            &:hover{
+                -webkit-filter: grayscale(0%) brightness(100%);
+                filter: grayscale(0%) brightness(100%);
+                transition: @transition;
+            }
+        }
+    }
 }
