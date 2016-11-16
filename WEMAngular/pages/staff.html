@@ -1,35 +1,66 @@
-<div class="width-control">
-    <div class="inner top staff">
-        <h1>Staff Information</h1>
-        <div class = "staff-main-paragraph">
-          <p>Meeting locations:</br>Eds &amp; Heads: 1045 ECB</br>All Staff Meetings: Tong Auditorium (1003 ECB) </p>
-        </div>
-        <div class="staff-display">
-            <div><h2>Date</h2></div>
-            <div ng-repeat="date in dates">{{date.date}}</div>
-        </div>
-        <div class="staff-display">
-            <div><h2>Meeting</h2></div>
-            <div ng-repeat="date in dates">{{date.meeting}}</div>
-        </div>
-        <div class="staff-display">
-            <div><h2>Notice:</h2></div>
-            <div ng-repeat="date in dates">{{date.homework}}</div>
+<div class="staff">
+
+    <h1>About Us</h1>
+
+    <img id="team-photo" src="../assets/team.jpg">
+
+    <p>
+        The Wisconsin Engineer magazine is student-run magazine at the University of Wisconsin, Madison. The magazine has been in print since 1896, and was one of the original five magazines to join Engineering College Magazines Associated (ECMA). It was set up as a non-profit organization in 1912 and continues to operate as a completely independent non-profit.
+        <br><br>
+        New issues are released four times each year - October, December, March, and May. The magazine is published for students and by students, and distributed for free throughout the University of Wisconsin campus. The staff size varies each semester but is normally right around 70 students. While all decisions within the organization are made by student leaders, we do have an advisor from UW Engineering Program - Steven Zwickel. The advisor also teaches a 1-credit called <b>Engineering Professional Development 690: Special Topics</b>, where students can earn credit for working with the magazine and completing additional coursework.
+        <br><br>
+        Our members must have an interest in graphic design, photography, writing, advertising, or business and must attend a biweekly meeting on Wednesday nights at 7:00 in Tong Auditorium in the Engineering Centers Building. If taking EPD 690 for a credit, one must also sell 2 subscriptions, make 2 distributions and attend one Eds and Heads meeting (which take place on alternating Wednesdays of the staff meetings).
+        <br><br>
+        All material in this publication is copyrighted. We are a member of the Associated Collegiate Press. Our publisher is American Printing Co.
+    </p>
+
+    <h1>2016-2017 Staff</h1>
+
+    <p>
+        The Wisconsin Engineer staff is composed of the Editors-in-chief, department heads, and student members. Department heads are highlighted in red.
+    </p>
+
+    <h2>Editors-in-chief</h2>
+    <div class="staff-display">
+        <div class="eic" ng-repeat="(key, value) in eics">
+            {{key}}
+            <a href="mailto:{{value}}">{{value}}</a>
         </div>
     </div>
-</div>
 
-<div class="full-width white has-shadow">
-    <div class="width-control">
-        <div class="inner">
-
-            <h1 class="section-header">Interested in joining us?</h1>
-            <p>
-                We're always looking for new people to join our staff! It doesn't matter if you're interested in writing, photography, graphic design, social media, or web development - we welcome all interested students to work with the team they prefer!
-                <br><br>
-                We have a kickoff meeting at the beginning of each semester to welcome new members and get them working on the right project. All students are welcome - even those not in an Engineering program!
-            </p>
-
-        </div>
+    <h2>Writing</h2>
+    <div class="staff-display">
+        <span ng-repeat="person in staffWriting" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
     </div>
+
+    <h2>Web & Media</h2>
+    <div class="staff-display">
+        <span ng-repeat="person in staffWeb" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+    </div>
+
+    <h2>Business</h2>
+    <div class="staff-display">
+        <span ng-repeat="person in staffBusiness" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+    </div>
+
+    <h2>Graphic Design</h2>
+    <div class="staff-display">
+        <span ng-repeat="person in staffGraphic" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+    </div>
+
+    <h2>Photography</h2>
+    <div class="staff-display">
+        <span ng-repeat="person in staffPhotography" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+    </div>
+
+
+    <div class="extra">
+        <h2>Interested in joining us?</h2>
+        <p>
+            We're always looking for new people to join our staff! It doesn't matter if you're interested in writing, photography, graphic design, social media, or web development - we welcome all interested students to work with the team they prefer!
+            <br><br>
+            We have a kickoff meeting at the beginning of each semester to welcome new members and get them working on the right project. All students are welcome - even those not in an Engineering program!
+        </p>
+    </div>
+
 </div>

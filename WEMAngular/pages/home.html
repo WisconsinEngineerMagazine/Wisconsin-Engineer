@@ -1,61 +1,36 @@
-<div class="width-control">
-    <div class="inner top home-new-mag">
-        <div class="home-left" style="background-image: url({{homeBG}});">
-
-            <h1>Latest Issue:</h1>
-            <h2><b>March 2016</b>Volume 120, Issue 2</h2>
-            <a href="/#/articles" id="read-latest">Read Now</a>
-
-
-        </div><!--
-        --><div class="home-right" style="background-image: url({{homeBG}});">
-
-        </div>
-    </div>
-</div>
-
-
-<div class="full-width white" ng-init="loadArticles();">
-    <div class="width-control">
-
-        <div class="inner">
-            <h1 class="section-header">Latest Articles</h1>
-            <div class="home-articles">
-                <div class="article" ng-repeat="article in homeArticles">
-                    <div class="article-image" ng-style="{'background-image':'url(../articles/content/images/{{article.slug}}.jpg)'}">
-                    </div><!--
-                    --><div class="article-body">
-                        <a href="/#/articles/{{article.slug}}"><u>{{article.title}}</u></a>
-                        <p>{{article.excerpt}}</p>
-                        <h3>By {{article.author}}</h3>
-                    </div>
-                </div>
-            </div>
-            <h2 id="home-read-more">Want more to read? <a href="/#/articles">View all articles.</a></h2>
-        </div>
+<div class="home-latest">
+    <div class="inner">
+        <h2>Latest Issue</h2>
+        <h1>October 2016</h1>
+        <a href="http://read.wisconsinengineer.com/tagged/october-2016">Read Now</a>
 
     </div>
 </div>
 
-
-<div class="full-width grey">
-    <div class="width-control">
-
-        <div class="inner">
-            <h1 class="section-header">Get a physical copy of Wisconsin Engineer.</h1>
-            <p>
-                Support over 100 years of student journalism and get the Wisconsin Engineer delivered straight to your door.  It's only $12 per year (4 issues).
-            </p>
-            <form id="subscribe-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="NR4ADY8KL87U6">
-                <button id="subscribe-physical" class="subscribe-print" name="submit">Sign up now</button>
-            </form>
+<div class="physical-copy">
+    <h1>Get a physical copy of Wisconsin Engineer mailed to you.</h1>
+    <h3>
+        Support over 100 years of student journalism and get the Wisconsin Engineer delivered straight to your door.  It's only $12 per year (4 issues).
+    </h3>
+    <div class="form">
+        <form id="subscribe-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="NR4ADY8KL87U6">
+            <button id="subscribe-physical" class="subscribe-print" name="submit">Sign up now</button>
             <a target="_blank" id="subscribe-physical-cancel" href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=Z9RDVPM578HBC">Or cancel your subscription</a>
-            <p>
-                You can pick up a free copy of the Wisconsin Engineer in many buildings on campus, including <b>Union South, Memorial Union, Holt, Steenbock, College Library, The University Bookstore, Witte, Sellery, Ogg, Liz Waters, Carson's, Engineering Hall, Mickie's Dairy Bar</b> and many more.
-            </p>
-        </div>
-
+        </form>
     </div>
+        <!-- <p>
+            You can pick up a free copy of the Wisconsin Engineer in many buildings on campus, including <b>Union South, Memorial Union, Holt, Steenbock, College Library, The University Bookstore, Witte, Sellery, Ogg, Liz Waters, Carson's, Engineering Hall, Mickie's Dairy Bar</b> and many more.
+        </p> -->
 </div>
+
+<div class="home-map">
+    <h1>Or pick one up for free in many campus buildings.</h1>
+    <h3>
+        Look for the magazine rack with our logo on it. Check out the map below to find your nearest location.
+    </h3>
+    <div id="map" class="map"></div>
+
+</div>
+<!-- MAPS API KEY AIzaSyASWEr10SFyJCbUZfLZHZ3uvzZxPCnvnWA -->

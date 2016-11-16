@@ -1,19 +1,24 @@
-//out: ../css/typography.css, sourcemap: false, compress: true
-
-@import 'variables.less';
-
 #h-tag(){
     padding: 0;
     margin: 0 auto;
+    color: @black;
 }
 h1{
     #h-tag();
+    font-size: 24pt;
+    font-weight: bolder;
 }
 h2{
     #h-tag();
+    font-weight: 400;
+    color: fade(@black, 50%);
+    font-size: 18pt;
 }
 h3{
     #h-tag();
+    font-weight: 400;
+    color: fade(@black, 40%);
+    font-size: 14pt;
 }
 h4{
     #h-tag();
