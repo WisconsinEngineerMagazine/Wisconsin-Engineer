@@ -1,5 +1,7 @@
 var wemApp = angular.module('wemApp', ['ngRoute', 'ngAnimate']);
 
+
+
 // configure the routes
 wemApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -38,6 +40,8 @@ wemApp.config(function($routeProvider, $locationProvider) {
     .otherwise('/40404040404040404!!!!')
 
 });
+
+
 
 
 // Home page controller
