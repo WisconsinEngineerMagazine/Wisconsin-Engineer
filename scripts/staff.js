@@ -78,10 +78,12 @@ wemApp.controller('staffController', ['$scope',
         ]
 
         $scope.staffWeb = [
-          "*Mitch Samuels",
-          "Justin Williams",
-          "Morgan Adkins",
-          "Eric Fleming"
+          "*Rachel Reiter",
+          "*Thomas Hansen",
+          "Vanessa Chavez",
+          "James Earley",
+          "Ruite Guo",
+          "Eric Shumaker"
         ]
 
 
