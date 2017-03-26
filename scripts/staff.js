@@ -43,8 +43,8 @@ wemApp.controller('staffController', ['$scope',
         ]
 
         $scope.staffGraphic = [
-          "*Suzanne Kukec",
           "*Patricia Stan",
+          "*Suzanne Kukec",
           "Marvyn Hsn",
           "Sadeq Hashemi",
           "Ian Geocaris",
@@ -73,6 +73,11 @@ wemApp.controller('staffController', ['$scope',
           "James Earley",
           "Ruite Guo",
           "Vanessa Chavez"
+        ]
+
+        $scope.staffSocialMedia = [
+          "*Eric Fleming",
+          "*Morgan Adkins",
         ]
 
 

@@ -33,14 +33,9 @@
         <span ng-repeat="person in staffWriting" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
     </div>
 
-    <h2>Web & Media</h2>
+    <h2>Photography</h2>
     <div class="staff-display">
-        <span ng-repeat="person in staffWeb" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
-    </div>
-
-    <h2>Business</h2>
-    <div class="staff-display">
-        <span ng-repeat="person in staffBusiness" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+        <span ng-repeat="person in staffPhotography" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
     </div>
 
     <h2>Graphic Design</h2>
@@ -48,9 +43,19 @@
         <span ng-repeat="person in staffGraphic" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
     </div>
 
-    <h2>Photography</h2>
+    <h2>Business</h2>
     <div class="staff-display">
-        <span ng-repeat="person in staffPhotography" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+        <span ng-repeat="person in staffBusiness" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+    </div>
+
+    <h2>Social Media</h2>
+    <div class="staff-display">
+        <span ng-repeat="person in staffSocialMedia" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
+    </div>
+
+    <h2>Web</h2>
+    <div class="staff-display">
+        <span ng-repeat="person in staffWeb" ng-class="{'head': person.indexOf('*') > -1}" >{{person.replace('*', '')}}</span>
     </div>
 
 
