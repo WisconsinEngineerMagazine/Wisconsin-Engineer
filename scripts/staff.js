@@ -10,47 +10,36 @@ wemApp.controller('staffController', ['$scope',
 
         $scope.staffWriting = [
           "*Alyssa Hantzsch",
-          "*Stacy Montgomery",
           "*Brandon Grill",
           "*Mikaela O'Keefe",
-          "Jordan Wolff",
-          "Morgan Adkins",
-          "Stephen Schwartz",
-          "Nena Nakum",
-          "Casey Miller",
-          "Madison Knobloch",
-          "Edwin Neumann",
-          "Yinghong Liu",
-          "Chris Hanko",
-          "Ben Zastrow",
+          "*Stacy Montgomery",
+          "Claire Holesovsky",
           "Connor Welch",
+          "Erin Clements",
+          "Jemimah Mawand",
+          "Jordan Wolff",
+          "Katlyn Nohr",
+          "Morgan Adkins",
           "Ruite Guo",
+          "Thomas Hansen",
           "Tom Eithun",
-          "Krishna Patel",
-          "Eric Fleming",
-          "Kirsten Pelkey",
-          "Emily Morzewski"
+          "Yinghong Liu"
         ]
 
 
          $scope.staffPhotography = [
+           "*Beth Enright",
            "*Heather Shumaker",
-           "*Matt Henricks",
-           "Chris DuPre",
-           "Dylan Geulig",
-           "Therese Besser",
-           "Brendan Hanke",
-           "Beth Enright",
-           "Robin Ritchey",
-           "Alexander Fanner",
-           "Lauren Kuzminski",
            "Abhi Kumar",
-           "Shashank Agrawal",
-           "Simon Hensen",
-           "Lili Haskins",
-           "Ben Chen",
            "Carter Swedal",
-           "Lianne Komen"
+           "Cody Schwartz",
+           "Dylan Guelig",
+           "Erin Clements",
+           "Lauren Kuzminski",
+           "Lili Haskins",
+           "Lianne Komen",
+           "Simon Hensen",
+           "Therese Besser"
         ]
 
         $scope.staffGraphic = [
@@ -80,10 +69,10 @@ wemApp.controller('staffController', ['$scope',
         $scope.staffWeb = [
           "*Rachel Reiter",
           "*Thomas Hansen",
-          "Vanessa Chavez",
+          "Eric Shumaker",
           "James Earley",
           "Ruite Guo",
-          "Eric Shumaker"
+          "Vanessa Chavez"
         ]
 
 
