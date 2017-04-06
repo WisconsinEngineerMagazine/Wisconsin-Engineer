@@ -23,7 +23,6 @@ wemApp.controller('staffController', ['$scope',
           "Katlyn Nohr",
           "Morgan Adkins",
           "Ruite Guo",
-          "Thomas Hansen",
           "Tom Eithun",
           "Yinghong Liu"
         ]
