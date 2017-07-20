@@ -29,7 +29,7 @@ wemApp.config(function($routeProvider, $locationProvider) {
         templateUrl : 'pages/advertise.html',
         activetab: 'advertise'
     })
-    .when('/promo', {
+    .when('/photo-contest', {
         templateUrl : 'pages/photo-contest.html',
         controller : 'photo-contestController',
         activetab: 'photo-contest'
