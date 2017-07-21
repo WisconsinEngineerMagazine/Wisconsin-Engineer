@@ -6,38 +6,48 @@
 wemApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
 
-    .when('/', {
-        templateUrl : 'pages/home.html',
-        controller  : 'homeController',
-        activetab: 'home'
-    })
-    .when('/contact', {
-        templateUrl : 'pages/contact.html',
-        controller  : 'contactController',
-        activetab: 'contact'
-    })
-    .when('/staff', {
-        templateUrl : 'pages/staff.html',
-        controller  : 'staffController',
-        activetab: 'staff'
-    })
-    .when('/contact', {
-        templateUrl : 'pages/contact.html',
-        activetab: 'contact'
-    })
-    .when('/advertise', {
-        templateUrl : 'pages/advertise.html',
-        activetab: 'advertise'
-    })
-    .when('/photocontest', {
-        templateUrl : 'pages/photocontest.html',
-        controller : 'photocontestController',
-        activetab: 'photocontest'
-    })
-    .when('/40404040404040404!!!!', {
-        templateUrl : 'pages/fourohfour.html'
-    })
-    .otherwise('/40404040404040404!!!!')
+        .when('/', {
+          templateUrl : 'pages/home.html',
+          controller  : 'homeController',
+          activetab: 'home'
+        })
+
+        .when('/contact', {
+            templateUrl : 'pages/contact.html',
+            controller  : 'contactController',
+            activetab: 'contact'
+        })
+
+        .when('/staff', {
+            templateUrl : 'pages/staff.html',
+            controller  : 'staffController',
+            activetab: 'staff'
+        })
+
+        .when('/contact', {
+            templateUrl : 'pages/contact.html',
+            activetab: 'contact'
+        })
+
+        .when('/advertise', {
+            templateUrl : 'pages/advertise.html',
+            activetab: 'advertise'
+        })
+
+        .when('/photocontest', {
+            templateUrl : 'pages/photocontest.html',
+            controller : 'photocontestController',
+            activetab: 'photocontest'
+        })
+
+        .when('/40404040404040404!!!!', {
+            templateUrl : 'pages/fourohfour.html'
+        })
+
+        .otherwise('/40404040404040404!!!!')
+
+    // use the HTML5 History API
+    $locationProvider.html5Mode(true);
 
 });
 
