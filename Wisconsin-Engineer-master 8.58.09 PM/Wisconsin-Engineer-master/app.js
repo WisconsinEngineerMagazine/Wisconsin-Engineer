@@ -34,10 +34,10 @@ wemApp.config(function($routeProvider, $locationProvider) {
             activetab: 'advertise'
         })
 
-        .when('/photocontest', {
-            templateUrl : 'pages/photocontest.html',
-            controller : 'photocontestController',
-            activetab: 'photocontest'
+        .when('/upcomingevents', {
+            templateUrl : 'pages/upcomingevents.html',
+            controller : 'upcomingeventsController',
+            activetab: 'upcomingevents'
         })
 
         .when('/40404040404040404!!!!', {
