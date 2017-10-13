@@ -4,7 +4,7 @@ wemApp.controller('staffController', ['$scope',
         ga('send', 'pageview', '/about');
 
         $scope.eics = {
-            "Nathaniel Corey": "corey2@wisc.edu",
+            "Steven Musbach": "smusbach@wisc.edu",
             "Matt Henricks": "mchenricks@wisc.edu"
         }
 
@@ -65,12 +65,12 @@ wemApp.controller('staffController', ['$scope',
 
         $scope.staffWeb = [
           "*Rachel Reiter",
-          "*Thomas Hansen",
+          "*James Earley",
           "Eric Shumaker",
-          "James Earley",
           "Junior Quintero",
           "Ruite Guo",
-          "Vanessa Chavez"
+          "Kelly Wegner",
+          "Matthew Kesler"
         ]
 
         $scope.staffSocialMedia = [
