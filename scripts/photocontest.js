@@ -1,8 +1,5 @@
-wemApp.controller('promoController', ['$scope',
+wemApp.controller('upcomingeventsController', ['$scope',
     function($scope) {
-        ga('send', 'pageview', '/promo');
-
-
-        
+        ga('send', 'pageview', '/upcomingevents');
     }
 ]);
