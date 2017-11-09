@@ -30,7 +30,7 @@ wemApp.config(function($routeProvider, $locationProvider) {
         })
 
         .when('/advertise', {
-            templateUrl : 'pages/advertise.html',
+            templateUrl : 'pages/reach.html',
             activetab: 'advertise'
         })
 
