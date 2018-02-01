@@ -70,7 +70,7 @@ wemApp.controller('staffController', ['$scope',
           "Junior Quintero",
           "Ruite Guo",
           "Kelly Wegner",
-          "Matthew Kesler"
+          "Matt Kesler"
         ]
 
         $scope.staffSocialMedia = [
