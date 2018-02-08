@@ -5,7 +5,7 @@ wemApp.controller('staffController', ['$scope',
 
         $scope.eics = {
             "Steven Musbach": "smusbach@wisc.edu",
-            "Matt Henricks": "mchenricks@wisc.edu"
+            "Edwin Neumann" : "eneumann3@wisc.edu"
         }
 
         $scope.staffWriting = [
