@@ -9,75 +9,63 @@ wemApp.controller('staffController', ['$scope',
         }
 
         $scope.staffWriting = [
-          "*Alyssa Hantzsch",
-          "*Brandon Grill",
-          "*Mikaela O'Keefe",
           "*Stacy Montgomery",
+          "*Brandon Grill",
+          "*Morgan Adkins",
+          "*Erin Clements",
+          "Ana Alba",
+          "Patrick Byrne",
+          "Erica Cavalche",
+          "Sarah Gerarden",
+          "Makenna Hall",
           "Chris Hanko",
-          "Claire Holesovsky",
-          "Connor Welch",
-          "Eric Fleming",
-          "Erin Clements",
+          "Ben Hayes",
+          "Yuliia Kap",
+          "Yinghong Liu",
           "Jemimah Mawande",
-          "Jordan Wolff",
           "Katlyn Nohr",
-          "Morgan Adkins",
-          "Ruite Guo",
-          "Tom Eithun",
-          "Yinghong Liu"
+          "Junior Quintero",
+          "Lucy Shoemaker",
+          "Jordan Wolff",
+          "Ben Zastrow"
         ]
 
-
          $scope.staffPhotography = [
-           "*Beth Enright",
-           "*Heather Shumaker",
-           "Abhi Kumar",
-           "Carter Swedal",
+           "*Brendan Hanke",
+           "*Jason Hakamaki",
+           "Gary Geson",
+           "Alex Lape",
+           "Mayukh Misra",
+           "Casey Schackow",
            "Cody Schwartz",
-           "Dylan Guelig",
-           "Erin Clements",
-           "Lauren Kuzminski",
-           "Lili Haskins",
-           "Lianne Komen",
-           "Simon Hensen",
-           "Therese Besser"
+           "Mary Shaughnessy",
+           "Carter Swedal",
+           "Simon Hensen"
         ]
 
         $scope.staffGraphic = [
           "*Patricia Stan",
-          "*Suzanne Kukec",
-          "James Johnston",
-          "Jonathan Evans",
-          "Tim Campbell",
-          "Lindsay George"
+          "*James Johnston"
         ]
 
         $scope.staffBusiness = [
-          "*Steven Musbach",
-          "Alex Hirsche",
-          "Felix Nguyen",
-          "Helen Keyes",
-          "Eric Wolfe",
-          "Mike Landowski",
-          "Cody Larson",
-          "Laine Kuether"
+          "*Jake Cohn",
+          "*Max Kaminski",
+          "Josh Niesen"
         ]
 
         $scope.staffWeb = [
           "*Thomas Hansen",
           "*James Earley",
+          "Matt Kesler",
           "Eric Shumaker",
-          "Junior Quintero",
-          "Ruite Guo",
-          "Kelly Wegner",
-          "Matt Kesler"
+          "Kelly Wegner"
         ]
 
         $scope.staffSocialMedia = [
           "*Eric Fleming",
-          "*Morgan Adkins",
+          "Lexi Kenwood"
         ]
-
 
     }
 ]);
