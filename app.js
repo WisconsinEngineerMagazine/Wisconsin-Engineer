@@ -1,7 +1,5 @@
 ﻿var wemApp = angular.module('wemApp', ['ngRoute', 'ngAnimate']);
 
-
-
 // configure the routes
 wemApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -37,7 +35,13 @@ wemApp.config(function($routeProvider, $locationProvider) {
         .when('/upcomingevents', {
             templateUrl : 'pages/upcomingevents.html',
             controller : 'upcomingeventsController',
-            activetab: 'upcomingevents'
+            activetab : 'upcomingevents'
+        })
+
+        .when('/crossword', {
+            templateUrl : 'pages/crossword.html',
+            controller : 'crosswordController',
+            activetab : 'crossword'
         })
 
         .when('/40404040404040404!!!!', {
