@@ -12,7 +12,7 @@ wemApp.controller('staffController', ['$scope',
           "*Erin Clements",
           "*Morgan Adkins",
           "*Katlyn Nohr",
-          "*Jemimah Mawande"
+          "*Jemimah Mawande",
           "Patrick Byrne",
           "Sarah Gerarden",
           "Makenna Hall",
@@ -104,8 +104,6 @@ wemApp.controller('staffController', ['$scope',
           "*Amalia Zeinemann",
           "*Ayushi Gangwal",
           "*Akshaya Thiru"
-
         ]
-
     }
 ]);
