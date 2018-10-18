@@ -4,68 +4,107 @@ wemApp.controller('staffController', ['$scope',
         ga('send', 'pageview', '/about');
 
         $scope.eics = {
-            "Steven Musbach": "smusbach@wisc.edu",
+            "Suzanne Kukec": "skukec@wisc.edu",
             "Edwin Neumann" : "eneumann3@wisc.edu"
         }
 
         $scope.staffWriting = [
-          "*Stacy Montgomery",
-          "*Brandon Grill",
-          "*Morgan Adkins",
           "*Erin Clements",
-          "Ana Alba",
+          "*Morgan Adkins",
+          "*Katlyn Nohr",
+          "*Jemimah Mawande"
           "Patrick Byrne",
-          "Erica Cavalche",
           "Sarah Gerarden",
           "Makenna Hall",
-          "Chris Hanko",
-          "Ben Hayes",
-          "Yuliia Kap",
-          "Yinghong Liu",
-          "Jemimah Mawande",
-          "Katlyn Nohr",
-          "Junior Quintero",
+          "Erica Cavalche",
           "Lucy Shoemaker",
-          "Jordan Wolff",
-          "Ben Zastrow"
+          "Ana Alba",
+          "Ben Hayes",
+          "Alfred Sunaryo",
+          "Nyah Banik",
+          "Nandan Venkatesan",
+          "Isabella Wegner",
+          "Akshat",
+          "Daniel Yao",
+          "Johnathon Brehm",
+          "Ethan Padgett",
+          "Ishan Luitel",
+          "Brianna Tobin",
+          "Cecelia Kaeder",
+          "Adam Mcavoy",
+          "Caitlin Bolz",
+          "Yanxu Guo",
+          "Lauren Westlund",
+          "Sion Wilks-Boguszewicz",
+          "Prasoon Sinha",
+          "Drew Accola",
+          "Camey Zussman",
+          "Evan Hakamaki",
+          "Sherine McManus",
+          "Ashley Pernsteiner",
+          "Leta Landucci",
+          "Elizabeth Eberhardt",
+          "Sharon Koretskov",
+          "Taylor Berger",
+          "Jake Beshlian",
+          "Madison Shipshock",
+          "Ivan Purgill",
+          "Emma Swanson",
+          "Hyunsung Ko",
+          "Connor Sanda",
+          "Sydney Heimer",
+          "Megan Baranek",
+          "Chaerim Lee",
+          "Zoe Delaney",
+          "Mayank Dornala",
+          "Dan Sa",
+          "Eric Tian",
+          "Whitney Huang",
+          "Sofia Noejovich"
         ]
 
          $scope.staffPhotography = [
-           "*Brendan Hanke",
            "*Jason Hakamaki",
-           "Gary Geson",
-           "Alex Lape",
-           "Mayukh Misra",
-           "Casey Schackow",
            "Cody Schwartz",
-           "Mary Shaughnessy",
+           "Ella Gao",
+           "Simon Hensen",
+           "Julia Mauser",
+           "Mayukh Misra",
+           "Gary Gensen",
+           "Mary Shaughessy",
+           "Casey Schackow",
+           "Alex Lape",
            "Carter Swedal",
-           "Simon Hensen"
+           "Annie Helmes",
+           "Beth Enright"
         ]
 
         $scope.staffGraphic = [
           "*Patricia Stan",
-          "*James Johnston"
+          "Jonathan Evans"
         ]
 
         $scope.staffBusiness = [
           "*Jake Cohn",
           "*Max Kaminski",
-          "Josh Niesen"
+          "Josh Niesen",
+          "Owen Trast",
+          "Wyatt Eiden"
         ]
 
         $scope.staffWeb = [
           "*James Earley",
           "*Eric Shumaker",
-          "Jiangang Chen",
           "Tingyou Guo",
           "Thomas Hansen",
-          "Matt Kesler",
+          "Matt Kesler"
         ]
 
-        $scope.staffSocialMedia = [
-          "*Eric Fleming",
-          "Lexi Kenwood"
+        $scope.staffPublicRelations = [
+          "*Amalia Zeinemann",
+          "*Ayushi Gangwal",
+          "*Akshaya Thiru"
+
         ]
 
     }
