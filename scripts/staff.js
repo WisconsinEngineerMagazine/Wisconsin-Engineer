@@ -10,61 +10,30 @@ wemApp.controller('staffController', ['$scope',
 
         $scope.staffWriting = [
           "*Erin Clements",
-          "*Morgan Adkins",
+          "*Erica Cavalche",
           "*Katlyn Nohr",
           "*Jemimah Mawande",
-          "Patrick Byrne",
           "Sarah Gerarden",
           "Makenna Hall",
-          "Erica Cavalche",
-          "Lucy Shoemaker",
           "Ana Alba",
           "Ben Hayes",
           "Alfred Sunaryo",
+          "Partick Byrne",
           "Nyah Banik",
           "Nandan Venkatesan",
           "Isabella Wegner",
-          "Akshat",
           "Daniel Yao",
           "Johnathon Brehm",
-          "Ethan Padgett",
-          "Ishan Luitel",
           "Brianna Tobin",
-          "Cecelia Kaeder",
-          "Adam Mcavoy",
-          "Caitlin Bolz",
-          "Yanxu Guo",
-          "Lauren Westlund",
-          "Sion Wilks-Boguszewicz",
-          "Prasoon Sinha",
-          "Drew Accola",
-          "Camey Zussman",
-          "Evan Hakamaki",
-          "Sherine McManus",
-          "Ashley Pernsteiner",
-          "Leta Landucci",
-          "Elizabeth Eberhardt",
-          "Sharon Koretskov",
-          "Taylor Berger",
-          "Jake Beshlian",
-          "Madison Shipshock",
-          "Ivan Purgill",
-          "Emma Swanson",
-          "Hyunsung Ko",
-          "Connor Sanda",
-          "Sydney Heimer",
-          "Megan Baranek",
-          "Chaerim Lee",
-          "Zoe Delaney",
-          "Mayank Dornala",
-          "Dan Sa",
-          "Eric Tian",
           "Whitney Huang",
-          "Sofia Noejovich"
+          "Sofia Noejovich",
+          "Camey Zussman",
+          "Sydney Heimer",
         ]
 
          $scope.staffPhotography = [
            "*Jason Hakamaki",
+           "*Hamoud Alshammari",
            "Cody Schwartz",
            "Ella Gao",
            "Simon Hensen",
@@ -81,7 +50,8 @@ wemApp.controller('staffController', ['$scope',
 
         $scope.staffGraphic = [
           "*Patricia Stan",
-          "Jonathan Evans"
+          "Jonathan Evans",
+          "Laura Rodricks",
         ]
 
         $scope.staffBusiness = [
@@ -89,21 +59,19 @@ wemApp.controller('staffController', ['$scope',
           "*Max Kaminski",
           "Josh Niesen",
           "Owen Trast",
-          "Wyatt Eiden"
+          "Wyatt Eiden",
         ]
 
         $scope.staffWeb = [
-          "*James Earley",
           "*Eric Shumaker",
-          "Tingyou Guo",
-          "Thomas Hansen",
-          "Matt Kesler"
+          "James Earley",
+          "Emily Cebasek",
         ]
 
         $scope.staffPublicRelations = [
           "*Amalia Zeinemann",
           "*Ayushi Gangwal",
-          "*Akshaya Thiru"
+          "*Akshaya Thiru",
         ]
     }
 ]);
