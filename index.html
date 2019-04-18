@@ -28,6 +28,7 @@
 
     <!-- STYLES -->
     <link href='styles/css/main.css' rel='stylesheet' type='text/css'>
+    <link href='styles/css/dropdown.css' rel='stylesheet' type='text/css'>
 
     <!-- VENDOR SCRIPTS -->
     <script src="scripts/vendor/jquery-2.2.0.min.js" type="text/javascript"></script>
@@ -41,6 +42,8 @@
     <script src="scripts/staff.js" type="text/javascript"></script>
     <script src="scripts/upcomingevents.js" type="text/javascript"></script>
     <script src="scripts/crossword.js" type="text/javascript"></script>
+    <script src="scripts/researchers.js" type="text/javascript"></script>
+
 
     <!-- GOOGLE MAPS API -->
     <script async defer
@@ -82,7 +85,15 @@
         <nav class="main">
             <ul>
                 <li ng-class="{active: $route.current.activetab == 'home'}"><a href="/#/">Home</a></li>
-                <li><a href="http://read.wisconsinengineer.com" target="_blank">Read</a></li>
+                <li ng-class="{active: $route.current.activetab == 'researchers'}">
+                <div class="dropdown">
+                  <button class="dropbtn">Read</button>
+                    <div class="dropdown-content">
+                      <a href="http://read.wisconsinengineer.com">Stories</a>
+                      <a href="/#/researchers">Researchers</a>
+                    </div>
+                </div>
+                </li>
                 <li ng-class="{active: $route.current.activetab == 'staff'}"><a href="/#/staff">Staff</a></li>
                 <li ng-class="{active: $route.current.activetab == 'advertise'}"><a href="/#/advertise">Advertise</a></li>
                 <li><a href="http://digicoll.library.wisc.edu/cgi-bin/UW/UW-idx?type=browse&scope=UW.WIE" target="_blank">Archive</a></li>

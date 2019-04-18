@@ -44,6 +44,12 @@ wemApp.config(function($routeProvider, $locationProvider) {
             activetab : 'crossword'
         })
 
+        .when('/researchers', {
+            templateUrl : 'pages/researchers.html',
+            controller : 'researchersController',
+            activetab : 'researchers'
+        })
+
         .when('/photocontest', {
           templateUrl : 'pages/photocontest.html',
           controller : 'photocontestController',
