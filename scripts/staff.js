@@ -12,7 +12,6 @@ wemApp.controller('staffController', ['$scope',
         $scope.staffWriting = [
           "*Erica Cavalche",
           "*Makenna Hall",
-          "*Nandan Venkatesan",
           "*Johnathon Brehm",
           "Sydney Heimer",
           "Sofia Noejovich",
