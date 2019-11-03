@@ -5,13 +5,13 @@ wemApp.controller('staffController', ['$scope',
 
         $scope.eics = {
             "Erin Clements": "eclements3@wisc.edu",
-            "Kaitlyn Nohr" : "knohr@wisc.edu"
+            "Katlyn Nohr" : "knohr@wisc.edu"
+            //not a spelling mistake, just a weird name
         }
 
         $scope.staffWriting = [
           "*Erica Cavalche",
           "*Makenna Hall",
-          "*Nandan Venkatesan",
           "*Johnathon Brehm",
           "Sydney Heimer",
           "Sofia Noejovich",
@@ -34,7 +34,6 @@ wemApp.controller('staffController', ['$scope',
 
          $scope.staffPhotography = [
            "*Jacobo Kirsch",
-           "Taha Sawar",
            "Rung Shih",
            "Lucy Kuo",
            "Julien Bravo",

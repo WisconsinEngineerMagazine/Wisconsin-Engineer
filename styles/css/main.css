@@ -344,7 +344,7 @@ div.staff div.staff-display .eic {
     font-weight: 500;
     text-transform: capitalize;
     box-sizing: border-box;
-    background-color: rgba(32, 52, 81, .1);
+    background-color: rgba(255, 0, 0, .5);
     border-radius: 4px;
     color: #203451;
     padding: 10px 15px
@@ -706,7 +706,7 @@ div.home-latest {
     margin: 55px 0;
     background-size: cover;
     background-position: center center;
-    background-image: url(../../current_issue/cover.summer2019.JPG);
+    background-image: url(../../assets/fall_2019/fall2019coverphoto.jpg);
     border-radius: 5px
 }
 
