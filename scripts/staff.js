@@ -34,7 +34,6 @@ wemApp.controller('staffController', ['$scope',
 
          $scope.staffPhotography = [
            "*Jacobo Kirsch",
-           "Taha Sawar",
            "Rung Shih",
            "Lucy Kuo",
            "Julien Bravo",
