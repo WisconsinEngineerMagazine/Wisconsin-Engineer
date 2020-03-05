@@ -702,7 +702,7 @@ div.contact-box {
 div.home-latest {
     display: block;
     width: 100%;
-    height: 400px;
+    height: 800px;
     margin: 55px 0;
     background-size: cover;
     background-position: center center;
@@ -728,7 +728,8 @@ div.home-latest div.inner h2 {
     font-size: 22pt;
     padding: 0;
     text-align: left;
-    display: block
+    display: block;
+
 }
 
 div.home-latest div.inner h1 {
@@ -740,7 +741,11 @@ div.home-latest div.inner h1 {
     line-height: .9em;
     color: #FFF;
     font-weight: bolder;
-    letter-spacing: 1px
+    letter-spacing: 1px;
+    text-shadow:  -1px -1px 0 #000,
+                  1px -1px 0 #000,
+                  -1px 1px 0 #000,
+                  1px 1px 0 #000;
 }
 
 div.home-latest div.inner a {

@@ -1,0 +1,57 @@
+<body style="border: 1px black solid;" bgcolor="transparent">
+	<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="100%" HEIGHT="100%" id="Inewsletter" ALIGN="">
+		<PARAM NAME=movie VALUE="../pages/WEMWebVersion.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#a5acb8>
+			<EMBED id="InnerNL" src="../pages/WEMWebVersion.swf" quality=high bgcolor=#a5acb8 WIDTH="100%" HEIGHT="95%" NAME="Inewsletter" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer">
+			</EMBED>
+		</OBJECT>
+
+
+	<div style ="background:transparent;	border:1px; border-color:white;">
+		<center>
+		<input type="image" src="../assets/Fullscreen-01.svg" onclick="openFullscreen();" width=4% height=4% title="Fullscreen"/>
+		</center>
+	</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+</script>
+<script>var elem = document.getElementById("Inewsletter");
+function openFullscreen() {
+	document.getElementById('InnerNL').style.height = '100%';
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+document.addEventListener('fullscreenchange', exitHandler);
+document.addEventListener('webkitfullscreenchange', exitHandler);
+document.addEventListener('mozfullscreenchange', exitHandler);
+document.addEventListener('MSFullscreenChange', exitHandler);
+document.addEventListener('keypress', logKey);
+function logKey(e) {
+  console.log(`${e.code}`);
+	document.getElementById('InnerNL').click();
+	document.getElementById('InnerNL').focus();
+	var e = $.Event('keypress');
+    e.which = 39; // Character 'A'
+    $('#InnerNL').trigger(e);
+}
+function exitHandler() {
+    if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+    document.getElementById('InnerNL').style.height = '95%';
+    }
+	}
+function ClickRight(){
+		document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2).click();
+		// var e = jQuery.Event("keypress");
+		// e.which = 39; // # Some key code value
+		// $("input").trigger(e);
+		//alert("Reached here");
+	}
+</script>
+</body>
