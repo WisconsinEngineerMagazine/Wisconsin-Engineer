@@ -13,58 +13,60 @@ wemApp.controller('staffController', ['$scope',
           "*Erica Cavalche",
           "*Makenna Hall",
           "*Johnathon Brehm",
-          "Sydney Heimer",
-          "Sofia Noejovich",
-          "Alfred Sunaryo",
-          "Brianna Tobin",
-          "Daniel Yao",
-          "Camey Zussman",
+          "*Jemimah Mawande",
           "Sarah Gerarden",
           "Ana Alba",
+          "Ben Hayes",
+          "Alfred Sunaryo",
+          "Partick Byrne",
+          "Gaby Setyawan",
           "Isabella Wegner",
+          "Daniel Yao",
+          "Brianna Tobin",
           "Whitney Huang",
+          "Sofia Noejovich",
+          "Camey Zussman",
+          "Sydney Heimer",
           "Teja Balasubramanian",
-          "Jared Vahrenberg",
-          "Gabriela Setyawan",
           "Mary Laudon",
-          "Alix Rosenblatt",
           "Pierson Chu",
-          "Paire Dollevoet",
+          "Jared Vahrenber",
+          "Paige Dollevoet",
+          "Alix Rosenblatt"
         ]
 
          $scope.staffPhotography = [
            "*Jacobo Kirsch",
            "Rung Shih",
-           "Lucy Kuo",
            "Julien Bravo",
            "Marshall Walters",
            "Austin Nellis",
            "Jared Michael Vahrenberg",
-           "Evan Birschbach",
         ]
 
         $scope.staffGraphic = [
           "*Laura Rodricks",
-          "Lucas Bartel",
-          "Lujain Al Jumah",
-          "Hannah Smoot",
+          "Isabella Wegner",
         ]
 
         $scope.staffBusiness = [
           "*Jake Cohn",
+          "*Max Kaminski",
+          "Owen Trast",
+          "Wyatt Eiden",
+          "Josh Niesen"
         ]
 
         $scope.staffWeb = [
-          "Jake Braun",
-          "*Adrian Tse",
-          "*Simone Wright",
-          "*Vaathsalya Karpe",
+          "*Sarwagya Jain",
+          "Adrian Tse",
+          "Vaathsalya Karpe",
         ]
 
-        $scope.staffPublicRelations = [
+/*        $scope.staffPublicRelations = [
           "*Ayushi Gangwal",
           "*Akshaya Thiru",
           "*Molly Zeinemann",
-        ]
+        ]*/
     }
 ]);

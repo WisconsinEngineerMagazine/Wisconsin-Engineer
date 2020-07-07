@@ -4,6 +4,11 @@
 wemApp.config(function($routeProvider, $locationProvider) {
     $routeProvider
 
+      .when('/WEM', {
+        templateUrl : 'pages/WEM.html',
+        controller  : 'wemController',
+        activetab: 'wem'
+      })
         .when('/', {
           templateUrl : 'pages/home.html',
           controller  : 'homeController',
